@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logistics Company Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+
+    <!-- ================= PAGE LOADER ================= -->
+<div class="page-loader" id="pageLoader">
+
+    <div class="loader-content">
+
+        <div class="stackly-loader">
+            STACKLY
+        </div>
+
+        <div class="loading-line">
+            <span></span>
+        </div>
+
+        <p>Loading...</p>
+
+    </div>
+
+</div>
+<!-- ================= END PAGE LOADER ================= -->
+
+
+    <!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+      </li>
+
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+<li><a href="login.html">Login</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- =========================================================
+     LOGISTICS HERO
+========================================================= -->
+
+<section class="logistics-hero" id="logisticsHero">
+
+    <!-- BACKGROUND SLIDES -->
+    <div class="hero-slides">
+
+        <div
+            class="hero-slide active"
+            style="background-image: url('images/contact1.jpg');">
+        </div>
+
+        <div
+            class="hero-slide"
+            style="background-image: url('images/contact2.jpg');">
+        </div>
+
+        <div
+            class="hero-slide"
+            style="background-image: url('images/contact3.jpg');">
+        </div>
+
+    </div>
+
+
+    <!-- DARK OVERLAY -->
+    <div class="hero-overlay"></div>
+
+
+    <!-- TECHNICAL GRID -->
+    <div class="hero-grid"></div>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="hero-content">
+
+        <span class="hero-kicker">
+            CONNECTING THE WORLD
+        </span>
+
+        <h1>
+            GET
+            <br>
+            <span>IN TOUCH.</span>
+        </h1>
+
+    </div>
+
+
+    <!-- SLIDE INDICATOR -->
+    <div class="hero-counter">
+
+        <span class="hero-current">
+            01
+        </span>
+
+        <span>/</span>
+
+        <span>
+            03
+        </span>
+
+    </div>
+
+
+    <!-- BOTTOM ARROW -->
+    <button
+        class="hero-scroll-btn"
+        id="heroScrollBtn"
+        type="button"
+        aria-label="Scroll to next section">
+
+        <span class="scroll-text">
+            EXPLORE
+        </span>
+
+        <span class="scroll-arrow">
+            <i class="ri-arrow-down-line"></i>
+        </span>
+
+    </button>
+
+
+    <!-- BOTTOM LINE -->
+    <div class="hero-bottom-line">
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOGISTICS CONTACT SECTION
+========================================================= -->
+
+<section class="logistics-contact" id="logisticsContact">
+
+    <div class="contact-grid"></div>
+
+    <div class="contact-inner">
+
+        <!-- LEFT CONTENT -->
+        <div class="contact-intro">
+
+            <span class="contact-eyebrow">
+                TRANSMISSION
+            </span>
+
+            <h2>
+                GET IN<br>
+                <span>TOUCH.</span>
+            </h2>
+
+            <p>
+                Have a shipment to move, a logistics challenge
+                to solve, or a new partnership to discuss?
+                Connect with our operations team.
+            </p>
+
+            <div class="contact-status">
+
+                <span class="status-label">
+                    NETWORK STATUS
+                </span>
+
+                <span class="status-live">
+                    <i></i>
+                    GLOBAL NETWORK ACTIVE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+
+            <form
+                id="logisticsContactForm"
+                class="logistics-contact-form"
+                novalidate
+            >
+
+                <!-- NAME -->
+                <div class="contact-field">
+
+                    <label for="contactName">
+                        01. IDENTITY NAME
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="YOUR_NAME"
+                            autocomplete="name"
+                        >
+
+                        <span class="field-icon">
+                            <i class="ri-user-line"></i>
+                        </span>
+
+                    </div>
+
+                    <small class="field-error">
+                        Please enter your name.
+                    </small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="contact-field">
+
+                    <label for="contactEmail">
+                        02. SIGNAL ADDRESS
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="EMAIL_ADDRESS"
+                            autocomplete="email"
+                        >
+
+                        <span class="field-icon">
+                            <i class="ri-mail-line"></i>
+                        </span>
+
+                    </div>
+
+                    <small class="field-error">
+                        Please enter a valid email address.
+                    </small>
+
+                </div>
+
+
+                <!-- SUBJECT -->
+                <div class="contact-field full-field">
+
+                    <label for="contactSubject">
+                        03. SUBJECT VECTOR
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <input
+                            type="text"
+                            id="contactSubject"
+                            name="subject"
+                            placeholder="LOGISTICS_INQUIRY"
+                        >
+
+                        <span class="field-icon">
+                            <i class="ri-route-line"></i>
+                        </span>
+
+                    </div>
+
+                    <small class="field-error">
+                        Please enter a subject.
+                    </small>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="contact-field full-field">
+
+                    <label for="contactMessage">
+                        04. MESSAGE CORE
+                    </label>
+
+                    <div class="input-wrap textarea-wrap">
+
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            placeholder="TRANSMISSION_DETAILS"
+                            rows="5"
+                        ></textarea>
+
+                        <span class="field-icon">
+                            <i class="ri-message-3-line"></i>
+                        </span>
+
+                    </div>
+
+                    <small class="field-error">
+                        Please enter your message.
+                    </small>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="contact-submit"
+                >
+
+                    <span>
+                        SEND TRANSMISSION
+                    </span>
+
+                    <i class="ri-arrow-right-up-line"></i>
+
+                </button>
+
+
+                <!-- SUCCESS -->
+                <div
+                    class="contact-success"
+                    id="contactSuccess"
+                >
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <span>
+                        TRANSMISSION RECEIVED / WE'LL BE IN TOUCH
+                    </span>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOGISTICS NETWORK NODES
+========================================================= -->
+
+<section class="logistics-nodes" id="logisticsNodes">
+
+    <!-- BACKGROUND -->
+    <div class="nodes-grid"></div>
+
+    <div class="nodes-inner">
+
+        <!-- HEADER -->
+        <div class="nodes-header">
+
+            <div class="nodes-title-wrap">
+
+                <span class="nodes-eyebrow">
+                    GLOBAL_LOGISTICS
+                </span>
+
+                <h2>
+                    LOGISTICS<span>_NODES</span>
+                </h2>
+
+            </div>
+
+            <!-- <div class="nodes-header-info">
+                GLOBAL TRANSPORT<br>
+                INFRASTRUCTURE
+            </div> -->
+
+        </div>
+
+
+        <!-- NODE CARDS -->
+        <div class="nodes-cards">
+
+
+            <!-- NODE 01 -->
+            <article class="node-card">
+
+                <div class="node-top">
+
+                    <span class="node-code">
+                        [ NODE_01 // SOUTH_HUB ]
+                    </span>
+
+                    <span class="node-status">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="node-main">
+
+                    <h3>
+                        CHENNAI
+                        <br>
+                        HUB
+                    </h3>
+
+                    <p>
+                        CONTAINER TERMINAL
+                        <br>
+                        REGIONAL DISTRIBUTION
+                        <br>
+                        SOUTH INDIA
+                    </p>
+
+                </div>
+
+
+                <div class="node-bottom">
+
+                    <span class="node-coords">
+                        COORD // 13.0827° N, 80.2707° E
+                    </span>
+
+                    <button
+                        class="node-arrow"
+                        type="button"
+                        aria-label="View Chennai hub"
+                        onclick="window.location.href='404.html'">
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- NODE 02 -->
+            <article class="node-card">
+
+                <div class="node-top">
+
+                    <span class="node-code">
+                        [ NODE_02 // CENTRAL_HUB ]
+                    </span>
+
+                    <span class="node-status">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="node-main">
+
+                    <h3>
+                        MADURAI
+                        <br>
+                        DEPOT
+                    </h3>
+
+                    <p>
+                        FREIGHT CONSOLIDATION
+                        <br>
+                        LAST-MILE OPERATIONS
+                        <br>
+                        SOUTH NETWORK
+                    </p>
+
+                </div>
+
+
+                <div class="node-bottom">
+
+                    <span class="node-coords">
+                        COORD // 9.9252° N, 78.1198° E
+                    </span>
+
+                    <button
+                        class="node-arrow"
+                        type="button"
+                        aria-label="View Madurai depot"
+                        onclick="window.location.href='404.html'">
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- NODE 03 -->
+            <article class="node-card">
+
+                <div class="node-top">
+
+                    <span class="node-code">
+                        [ NODE_03 // WEST_CORRIDOR ]
+                    </span>
+
+                    <span class="node-status">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="node-main">
+
+                    <h3>
+                        COIMBATORE
+                        <br>
+                        CORE
+                    </h3>
+
+                    <p>
+                        INDUSTRIAL FREIGHT
+                        <br>
+                        ROAD TRANSPORT
+                        <br>
+                        REGIONAL GATEWAY
+                    </p>
+
+                </div>
+
+
+                <div class="node-bottom">
+
+                    <span class="node-coords">
+                        COORD // 11.0168° N, 76.9558° E
+                    </span>
+
+                    <button
+                        class="node-arrow"
+                        type="button"
+                        aria-label="View Coimbatore core"
+                        onclick="window.location.href='404.html'">
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- BOTTOM SYSTEM INFO -->
+        <div class="nodes-footer">
+
+            <div class="nodes-footer-left">
+
+                <span class="live-dot"></span>
+
+                <span>
+                    NETWORK STATUS // OPERATIONAL
+                </span>
+
+            </div>
+
+            <div class="nodes-footer-center">
+                03 ACTIVE NODES
+            </div>
+
+            <div class="nodes-footer-right">
+                STACKLY / GLOBAL MOVEMENT SYSTEM
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOGISTICS FAQ
+========================================================= -->
+
+<section class="logistics-faq" id="logisticsFaq">
+
+    <div class="faq-inner">
+
+        <!-- HEADER -->
+        <div class="faq-header">
+
+            <span class="faq-eyebrow">
+                KNOWLEDGE_BASE / LOGISTICS
+            </span>
+
+            <h2>
+                LOGISTICS<span>_FAQ</span>
+            </h2>
+
+            <p>
+                QUICK ANSWERS FOR YOUR LOGISTICS OPERATIONS.
+            </p>
+
+        </div>
+
+
+        <!-- FAQ LIST -->
+        <div class="faq-list">
+
+
+            <!-- FAQ 01 -->
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        HOW CAN I TRACK MY SHIPMENT IN REAL TIME?
+                    </span>
+
+                    <i class="ri-add-line"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Track your shipment through our live
+                        logistics network using the shipment
+                        reference number. You can view current
+                        location, route progress, delivery status,
+                        and estimated arrival time.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAQ 02 -->
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        WHAT TYPES OF FREIGHT DOES STACKLY HANDLE?
+                    </span>
+
+                    <i class="ri-add-line"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Our logistics network supports road,
+                        air, ocean, and multimodal freight
+                        movements for commercial and industrial
+                        shipments.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAQ 03 -->
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        HOW DO I REQUEST A NEW SHIPMENT?
+                    </span>
+
+                    <i class="ri-add-line"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Submit your shipment requirements through
+                        our logistics request form with pickup,
+                        destination, cargo, and preferred delivery
+                        details. Our operations team can then
+                        coordinate the next steps.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAQ 04 -->
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        DO YOU PROVIDE WAREHOUSING AND DISTRIBUTION?
+                    </span>
+
+                    <i class="ri-add-line"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Our logistics solutions can include
+                        storage, inventory coordination,
+                        consolidation, distribution, and
+                        last-mile delivery operations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAQ 05 -->
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        HOW CAN I CONTACT THE LOGISTICS TEAM?
+                    </span>
+
+                    <i class="ri-add-line"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Use the contact form on our website to
+                        share your logistics requirement. Our
+                        team can assist with shipment planning,
+                        freight coordination, tracking, and
+                        business enquiries.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM INFO -->
+        <div class="faq-footer">
+
+            <span>
+                STACKLY / LOGISTICS SUPPORT SYSTEM
+            </span>
+
+            <span>
+                05 / FAQ
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOGISTICS PARTNERSHIP SECTION
+========================================================= -->
+
+<section class="logistics-partner" id="logisticsPartner">
+
+    <!-- BACKGROUND IMAGE -->
+    <div class="partner-bg">
+        <img
+            src="images/ship.jpg"
+            alt="Logistics operations"
+        >
+    </div>
+
+    <!-- DARK OVERLAY -->
+    <div class="partner-overlay"></div>
+
+
+    <!-- CONTENT -->
+    <div class="partner-content">
+
+        <span class="partner-eyebrow">
+            STACKLY / GLOBAL OPERATIONS
+        </span>
+
+        <h2>
+            PARTNER<br>
+            <span>WITH US.</span>
+        </h2>
+
+        <p>
+            Build stronger supply chains with a logistics
+            network designed for reliable movement,
+            smarter operations, and long-term growth.
+        </p>
+
+
+        <!-- BUTTONS -->
+        <div class="partner-actions">
+
+            <a
+                href="#contact"
+                class="partner-btn primary"
+            >
+                START A PARTNERSHIP
+                <i class="ri-arrow-right-up-line"></i>
+            </a>
+
+            <a
+                href="#contact"
+                class="partner-btn secondary"
+            >
+                CONTACT TEAM
+                <i class="ri-arrow-right-line"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- TECHNICAL LABEL -->
+    <div class="partner-code">
+        LOGISTICS_NETWORK // 08
+    </div>
+
+
+    <!-- BOTTOM COMPANY DETAILS -->
+    <div class="partner-details">
+
+        <!-- PHONE -->
+        <div class="partner-detail">
+
+            <div class="detail-icon">
+                <i class="ri-phone-line"></i>
+            </div>
+
+            <div class="detail-text">
+
+                <span>
+                    PHONE
+                </span>
+
+                <strong>
+                    +91 98765 43210
+                </strong>
+
+                <small>
+                    GLOBAL SUPPORT
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="partner-detail">
+
+            <div class="detail-icon">
+                <i class="ri-mail-line"></i>
+            </div>
+
+            <div class="detail-text">
+
+                <span>
+                    EMAIL
+                </span>
+
+                <strong>
+                    hello@stackly.com
+                </strong>
+
+                <small>
+                    BUSINESS ENQUIRIES
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOURS -->
+        <div class="partner-detail">
+
+            <div class="detail-icon">
+                <i class="ri-time-line"></i>
+            </div>
+
+            <div class="detail-text">
+
+                <span>
+                    OPERATIONS
+                </span>
+
+                <strong>
+                    MONDAY — FRIDAY
+                </strong>
+
+                <small>
+                    09:00 AM — 06:00 PM
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+        <div class="partner-detail">
+
+            <div class="detail-icon">
+                <i class="ri-map-pin-line"></i>
+            </div>
+
+            <div class="detail-text">
+
+                <span>
+                    HEAD OFFICE
+                </span>
+
+                <strong>
+                    CHENNAI, INDIA
+                </strong>
+
+                <small>
+                    SOUTH INDIA OPERATIONS
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM LINE -->
+    <div class="partner-bottom-line"></div>
+
+</section>
+
+<!-- =========================================================
+     GLOBAL LOGISTICS IMAGE SECTION
+========================================================= -->
+
+<section class="logistics-map-section" id="logisticsMapSection">
+
+    <div class="map-section-inner">
+
+        <!-- TOP LABEL -->
+        <div class="map-section-header">
+
+            <span>
+                GLOBAL_NETWORK / SYSTEM_09
+            </span>
+
+            <span>
+                WORLDWIDE MOVEMENT
+            </span>
+
+        </div>
+
+
+        <!-- IMAGE -->
+        <div class="logistics-map-image">
+
+            <img
+                src="images/map.jpg"
+                alt="Global logistics network"
+            >
+
+            <div class="map-overlay"></div>
+
+
+            <!-- IMAGE CONTENT -->
+            <div class="map-content">
+
+                <span class="map-code">
+                    GLOBAL ROUTE INTELLIGENCE
+                </span>
+
+                <h2>
+                    CONNECTING
+                    <br>
+                    <span>EVERY MILE.</span>
+                </h2>
+
+            </div>
+
+
+            <!-- IMAGE CORNER INFO -->
+            <div class="map-top-info">
+                LIVE NETWORK
+            </div>
+
+
+            <div class="map-bottom-info">
+
+                <span>
+                    120+ ROUTES
+                </span>
+
+                <span class="map-dot"></span>
+
+                <span>
+                    42 ACTIVE HUBS
+                </span>
+
+                <span class="map-dot"></span>
+
+                <span>
+                    24 / 7 MOVEMENT
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM DESCRIPTION -->
+        <div class="map-description">
+
+            <span class="map-line"></span>
+
+            <p>
+                A connected logistics network built to move
+                freight across cities, borders, ports, and
+                distribution hubs with precision.
+            </p>
+
+            <span class="map-number">
+                09 / 12
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- =========================
+            FOOTER SECTION
+        ========================== -->
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- =========================
+             BRAND
+        ========================== -->
+
+        <div class="footer-brand">
+
+<a href="index.html" class="footer-logo">
+    <img
+        src="images/stackly_logo.webp"
+        alt="Stackly"
+    >
+</a>
+
+            <p>
+                Redefining the speed of global trade through
+                industrial innovation and extreme technical
+                precision.
+            </p>
+
+<div class="footer-socials">
+
+    <!-- X -->
+    <a href="404.html" aria-label="X">
+        <svg viewBox="0 0 24 24">
+            <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.8h1.73L8.28 4.1H6.43L17.8 19.8Z"/>
+        </svg>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="404.html" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+            <path d="M5.2 3.5A2.2 2.2 0 1 1 .8 3.5a2.2 2.2 0 0 1 4.4 0ZM1 8h4.3v13H1V8Zm6.9 0h4.1v1.8h.1c.6-1.1 2.1-2.2 4.4-2.2 4.7 0 5.5 3.1 5.5 7.1V21h-4.3v-5.6c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V21H7.9V8Z"/>
+        </svg>
+    </a>
+
+
+    <!-- Instagram -->
+    <a href="404.html" aria-label="Instagram">
+        <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1"/>
+        </svg>
+    </a>
+
+</div>
+
+        </div>
+
+
+        <!-- =========================
+             SOLUTIONS
+        ========================== -->
+
+        <div class="footer-column">
+
+            <h4>SOLUTIONS</h4>
+
+            <a href="404.html">AIR FREIGHT</a>
+            <a href="404.html">MARITIME</a>
+            <a href="404.html">ROAD & RAIL</a>
+            <a href="404.html">CONTRACT LOGISTICS</a>
+            <a href="404.html">CUSTOMS BROKERAGE</a>
+
+        </div>
+
+<!-- =========================
+     QUICK LINKS
+========================== -->
+
+<div class="footer-column">
+
+    <h4>QUICK LINKS</h4>
+
+    <a href="index.html">HOME</a>
+    <a href="404.html">ABOUT</a>
+    <a href="404.html">SERVICE</a>
+    <a href="404.html">BLOG</a>
+    <a href="404.html">CONTACT</a>
+
+</div>
+
+        <!-- =========================
+             TECHNOLOGY
+        ========================== -->
+
+        <div class="footer-column">
+
+            <h4>TECHNOLOGY</h4>
+
+            <a href="404.html">V-MONITOR</a>
+            <a href="404.html">API DOCS</a>
+            <a href="404.html">CARRIER PORTAL</a>
+            <a href="404.html">ANALYTICS</a>
+
+        </div>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+
+        <div class="footer-newsletter">
+
+            <h4>JOIN THE PULSE</h4>
+
+            <p>
+                Receive industrial intelligence and network
+                updates weekly.
+            </p>
+
+<form class="subscribe-form" id="subscribeForm">
+
+    <input
+        type="email"
+        id="emailInput"
+        placeholder="EMAIL ADDRESS"
+        autocomplete="email"
+    >
+
+    <button type="submit">
+        SUBSCRIBE
+    </button>
+
+</form>
+
+<span class="email-error" id="emailError"></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DIVIDER
+    ========================== -->
+
+    <div class="footer-divider"></div>
+
+
+    <!-- =========================
+         WATERMARK
+    ========================== -->
+
+    <div class="footer-watermark">
+        STACKLY
+    </div>
+
+
+    <!-- =========================
+         BOTTOM LINKS
+    ========================== -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-legal">
+
+            <a href="404.html">PRIVACY</a>
+
+            <a href="404.html">TERMS OF SERVICE</a>
+
+            <a href="404.html">COMPLIANCE</a>
+
+        </div>
+
+        <p>
+            © 2024 Stackly. ALL RIGHTS RESERVED.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="./js/contact.js"></script>
+
+</body>
+</html>

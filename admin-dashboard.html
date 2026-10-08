@@ -1,0 +1,2951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STACKLY | Logistics Admin Dashboard</title>
+
+    <!-- Remix Icon -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/admin-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+
+        <h2 class="logo">
+            STACKLY
+        </h2>
+
+        <button
+            class="close-btn"
+            id="closeBtn"
+            type="button"
+        >
+            <i class="ri-close-line"></i>
+        </button>
+
+    </div>
+
+
+    <ul class="menu">
+
+        <li>
+            <a
+                href="#dashboard"
+                class="active"
+            >
+                <i class="ri-dashboard-3-line"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#shipments">
+                <i class="ri-truck-line"></i>
+                <span>Shipments</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#clients">
+                <i class="ri-user-3-line"></i>
+                <span>Clients</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#fleet">
+                <i class="ri-roadster-line"></i>
+                <span>Fleet</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#tracking">
+                <i class="ri-map-pin-line"></i>
+                <span>Live Tracking</span>
+            </a>
+        </li>
+
+    </ul>
+
+
+    <!-- EXIT -->
+
+    <div class="sidebar-exit">
+
+        <a href="index.html">
+
+            <i class="ri-logout-box-r-line"></i>
+
+            <span>
+                Exit
+            </span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main">
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================= -->
+
+    <header class="navbar">
+
+
+        <!-- LEFT -->
+
+        <div class="nav-left">
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+            >
+                <i class="ri-menu-line"></i>
+            </button>
+
+
+            <div class="welcome-area">
+
+                <span class="welcome-label">
+                    HEAD CONCIERGE
+                </span>
+
+                <h2>
+
+                    Welcome,
+
+                    <span id="userName">
+                        User
+                    </span>
+
+                    <span class="welcome-star">
+                        ✦
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE LOGO -->
+
+        <h2 class="mobile-logo">
+            STACKLY
+        </h2>
+
+
+        <!-- RIGHT -->
+
+        <div class="nav-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <div class="icon">
+
+                <a href="404.html">
+
+                    <i class="ri-notification-3-line"></i>
+
+                    <span class="badge">
+                        2
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="icon">
+
+                <a href="404.html">
+
+                    <i class="ri-message-3-line"></i>
+
+                    <span class="badge">
+                        4
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- ADMIN -->
+
+            <div class="profile-info">
+
+                <span class="role-label">
+                    ADMIN
+                </span>
+
+                <p
+                    class="profile-email"
+                    id="userEmail"
+                >
+                    user@example.com
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="avatar">
+
+                <i class="ri-user-3-line"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         DASHBOARD SECTION
+    ================================================= -->
+
+    <section
+        class="dashboard-content"
+        id="dashboardSection"
+    >
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading">
+
+            <span>
+                LOGISTICS CONTROL
+            </span>
+
+            <h1>
+                DASHBOARD
+            </h1>
+
+        </div>
+
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        ACTIVE SHIPMENTS
+                    </span>
+
+                    <h2>
+                        128
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-global-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        GLOBAL DELIVERIES
+                    </span>
+
+                    <h2>
+                        2,846
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-road-map-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        ACTIVE ROUTES
+                    </span>
+
+                    <h2>
+                        64
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        ON-TIME RATE
+                    </span>
+
+                    <h2>
+                        98.6%
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             LIVE ROUTE
+        ================================================= -->
+
+        <div class="logistics-route-card">
+
+
+            <!-- LEFT -->
+
+            <div class="route-progress">
+
+                <div class="route-status">
+
+                    <button
+                        class="route-status-btn active"
+                        data-status="transit"
+                        type="button"
+                    >
+                        <i class="ri-truck-line"></i>
+                        In Transit
+                    </button>
+
+                    <button
+                        class="route-status-btn"
+                        data-status="pending"
+                        type="button"
+                    >
+                        <i class="ri-time-line"></i>
+                        Pending
+                    </button>
+
+                    <button
+                        class="route-status-btn"
+                        data-status="delivered"
+                        type="button"
+                    >
+                        <i class="ri-checkbox-circle-line"></i>
+                        Delivered
+                    </button>
+
+                </div>
+
+
+                <div class="delivery-progress">
+
+                    <span class="progress-label">
+                        FLEET PROGRESS
+                    </span>
+
+                    <div class="progress-number">
+
+                        <span id="fleetProgress">
+                            68
+                        </span>
+
+                        <small>
+                            %
+                        </small>
+
+                    </div>
+
+                    <div class="fleet-progress-bar">
+
+                        <span
+                            id="fleetProgressBar"
+                            style="width:68%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="route-stats">
+
+
+                    <div class="route-stat">
+
+                        <div class="route-stat-icon">
+                            <i class="ri-route-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                DISTANCE COVERED
+                            </span>
+
+                            <strong id="distanceCovered">
+                                420 km
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-stat">
+
+                        <div class="route-stat-icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                ESTIMATED ARRIVAL
+                            </span>
+
+                            <strong id="estimatedArrival">
+                                1h 35 min
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MAP -->
+
+            <div class="logistics-map">
+
+                <div class="map-background"></div>
+
+                <div class="map-road road-1"></div>
+                <div class="map-road road-2"></div>
+                <div class="map-road road-3"></div>
+                <div class="map-road road-4"></div>
+
+
+                <svg
+                    class="delivery-route"
+                    viewBox="0 0 600 350"
+                    preserveAspectRatio="none"
+                >
+
+                    <path
+                        class="route-shadow"
+                        d="
+                        M30 280
+                        C100 275 115 220 175 235
+                        C235 250 250 175 305 185
+                        C355 195 375 110 430 125
+                        C480 140 500 70 555 80
+                        C575 83 590 70 600 60
+                        "
+                    ></path>
+
+
+                    <path
+                        class="route-path"
+                        d="
+                        M30 280
+                        C100 275 115 220 175 235
+                        C235 250 250 175 305 185
+                        C355 195 375 110 430 125
+                        C480 140 500 70 555 80
+                        C575 83 590 70 600 60
+                        "
+                    ></path>
+
+                </svg>
+
+
+                <!-- ORIGIN -->
+
+                <div class="route-location origin">
+
+                    <span class="route-dot"></span>
+
+                    <div class="location-info">
+
+                        <small>
+                            ORIGIN
+                        </small>
+
+                        <strong>
+                            Chennai Hub
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VEHICLE -->
+
+                <div class="current-vehicle">
+
+                    <div class="vehicle-pulse"></div>
+
+                    <div class="vehicle-icon">
+
+                        <i class="ri-truck-line"></i>
+
+                    </div>
+
+                    <div class="vehicle-info">
+
+                        <strong>
+                            TN 38 AB 4521
+                        </strong>
+
+                        <span>
+                            En Route
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINATION -->
+
+                <div class="route-location destination">
+
+                    <span class="destination-dot"></span>
+
+                    <div class="location-info">
+
+                        <small>
+                            DESTINATION
+                        </small>
+
+                        <strong>
+                            Madurai Hub
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ZOOM -->
+
+                <div class="map-zoom">
+
+                    <button
+                        id="zoomIn"
+                        type="button"
+                    >
+                        <i class="ri-add-line"></i>
+                    </button>
+
+                    <button
+                        id="zoomOut"
+                        type="button"
+                    >
+                        <i class="ri-subtract-line"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ALERTS -->
+
+            <div class="route-alerts">
+
+                <div class="alerts-heading">
+
+                    <h3>
+                        Alerts
+                    </h3>
+
+                    <button
+                        id="viewAlerts"
+                        type="button"
+                    >
+                        View all
+                    </button>
+
+                </div>
+
+
+                <div class="route-alert">
+
+                    <div class="alert-symbol warning">
+                        <i class="ri-error-warning-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Traffic Alert
+                        </strong>
+
+                        <p>
+                            Heavy traffic detected on current delivery route.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="route-alert">
+
+                    <div class="alert-symbol success">
+                        <i class="ri-checkbox-circle-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            On Schedule
+                        </strong>
+
+                        <p>
+                            Vehicle is expected to arrive on time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="alert-details"
+                    id="alertDetails"
+                    type="button"
+                >
+
+                    View Details
+
+                    <i class="ri-arrow-right-line"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SHIPMENTS SECTION
+         
+         IMPORTANT:
+         This is INSIDE .main
+    ================================================= -->
+
+    <section
+        class="shipments-section"
+        id="shipmentsSection"
+    >
+
+
+        <!-- HEADER -->
+
+        <div class="shipments-heading">
+
+            <div class="shipments-title">
+
+                <span>
+                    LOGISTICS OPERATIONS
+                </span>
+
+                <h1>
+                    SHIPMENTS
+                </h1>
+
+                <p>
+                    Manage and monitor all active shipment operations.
+                </p>
+
+            </div>
+
+
+            <button
+                class="new-shipment-btn"
+                id="newShipmentBtn"
+                type="button"
+            >
+
+                <i class="ri-add-line"></i>
+
+                <span>
+                    New Shipment
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- SHIPMENT STATS -->
+
+        <div class="shipment-stats">
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon blue">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        IN TRANSIT
+                    </span>
+
+                    <h2>
+                        84
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon orange">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        PENDING
+                    </span>
+
+                    <h2>
+                        32
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon green">
+                    <i class="ri-checkbox-circle-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        DELIVERED
+                    </span>
+
+                    <h2>
+                        126
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon purple">
+                    <i class="ri-route-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL SHIPMENTS
+                    </span>
+
+                    <h2>
+                        242
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SHIPMENT TABLE -->
+
+        <div class="shipment-table-card">
+
+
+            <div class="shipment-table-header">
+
+                <div>
+
+                    <h3>
+                        Shipment Overview
+                    </h3>
+
+                    <p>
+                        Recent logistics shipment activity
+                    </p>
+
+                </div>
+
+
+                <div class="shipment-filter">
+
+                    <button
+                        class="shipment-filter-btn active"
+                        data-filter="all"
+                        type="button"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="shipment-filter-btn"
+                        data-filter="in-transit"
+                        type="button"
+                    >
+                        In Transit
+                    </button>
+
+                    <button
+                        class="shipment-filter-btn"
+                        data-filter="pending"
+                        type="button"
+                    >
+                        Pending
+                    </button>
+
+                    <button
+                        class="shipment-filter-btn"
+                        data-filter="delivered"
+                        type="button"
+                    >
+                        Delivered
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="shipment-table-wrapper">
+
+                <table class="shipment-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                SHIPMENT ID
+                            </th>
+
+                            <th>
+                                CLIENT
+                            </th>
+
+                            <th>
+                                ROUTE
+                            </th>
+
+                            <th>
+                                DATE
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                PROGRESS
+                            </th>
+
+                            <th>
+                                ACTION
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="shipmentTableBody">
+
+
+                        <!-- ROW 1 -->
+
+                        <tr data-status="in-transit">
+
+                            <td>
+                                <strong>
+                                    #STK-1024
+                                </strong>
+                            </td>
+
+                            <td>
+                                Aruna Logistics
+                            </td>
+
+                            <td>
+                                Chennai → Madurai
+                            </td>
+
+                            <td>
+                                06 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status transit">
+                                    In Transit
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        72%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:72%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                    title="View Shipment"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 2 -->
+
+                        <tr data-status="pending">
+
+                            <td>
+                                <strong>
+                                    #STK-1025
+                                </strong>
+                            </td>
+
+                            <td>
+                                Blue Star Pvt Ltd
+                            </td>
+
+                            <td>
+                                Coimbatore → Chennai
+                            </td>
+
+                            <td>
+                                06 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        28%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:28%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 3 -->
+
+                        <tr data-status="delivered">
+
+                            <td>
+                                <strong>
+                                    #STK-1026
+                                </strong>
+                            </td>
+
+                            <td>
+                                South India Traders
+                            </td>
+
+                            <td>
+                                Bangalore → Salem
+                            </td>
+
+                            <td>
+                                05 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status delivered">
+                                    Delivered
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        100%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:100%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 4 -->
+
+                        <tr data-status="in-transit">
+
+                            <td>
+                                <strong>
+                                    #STK-1027
+                                </strong>
+                            </td>
+
+                            <td>
+                                Greenfield Exports
+                            </td>
+
+                            <td>
+                                Madurai → Trichy
+                            </td>
+
+                            <td>
+                                05 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status transit">
+                                    In Transit
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        61%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:61%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 5 -->
+
+                        <tr data-status="pending">
+
+                            <td>
+                                <strong>
+                                    #STK-1028
+                                </strong>
+                            </td>
+
+                            <td>
+                                Metro Distributors
+                            </td>
+
+                            <td>
+                                Chennai → Salem
+                            </td>
+
+                            <td>
+                                05 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        15%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:15%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ================= CLIENTS SECTION ================= -->
+<section class="clients-section" id="clientsSection">
+
+    <div class="section-heading">
+        <div>
+            <span class="section-label">LOGISTICS OPERATIONS</span>
+            <h1>CLIENTS</h1>
+            <p>Manage logistics clients, business accounts and delivery relationships.</p>
+        </div>
+
+        <button class="primary-btn" id="addClientBtn">
+            <i class="ri-user-add-line"></i>
+            Add Client
+        </button>
+    </div>
+
+    <!-- Client Stats -->
+    <div class="client-stats">
+
+        <div class="client-stat-card">
+            <div class="stat-icon blue">
+                <i class="ri-group-line"></i>
+            </div>
+            <div>
+                <span>Total Clients</span>
+                <strong>186</strong>
+                <small>+12 this month</small>
+            </div>
+        </div>
+
+        <div class="client-stat-card">
+            <div class="stat-icon green">
+                <i class="ri-checkbox-circle-line"></i>
+            </div>
+            <div>
+                <span>Active Clients</span>
+                <strong>142</strong>
+                <small>76.3% of total</small>
+            </div>
+        </div>
+
+        <div class="client-stat-card">
+            <div class="stat-icon orange">
+                <i class="ri-time-line"></i>
+            </div>
+            <div>
+                <span>Pending Clients</span>
+                <strong>18</strong>
+                <small>Awaiting approval</small>
+            </div>
+        </div>
+
+        <div class="client-stat-card">
+            <div class="stat-icon purple">
+                <i class="ri-building-line"></i>
+            </div>
+            <div>
+                <span>Business Accounts</span>
+                <strong>96</strong>
+                <small>Enterprise clients</small>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Client Table -->
+    <div class="clients-table-card">
+
+        <div class="table-top">
+
+            <div class="table-title">
+                <h2>Client Directory</h2>
+                <p>View and manage all registered logistics clients.</p>
+            </div>
+
+            <div class="client-tools">
+
+                <div class="client-search">
+                    <i class="ri-search-line"></i>
+                    <input
+                        type="text"
+                        id="clientSearch"
+                        placeholder="Search clients..."
+                    >
+                </div>
+
+                <select id="clientFilter">
+                    <option value="all">All Clients</option>
+                    <option value="active">Active</option>
+                    <option value="pending">Pending</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="clients-table-wrapper">
+
+            <table class="clients-table">
+
+                <thead>
+                    <tr>
+                        <th>CLIENT</th>
+                        <th>COMPANY</th>
+                        <th>CONTACT</th>
+                        <th>LOCATION</th>
+                        <th>SHIPMENTS</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody id="clientsTableBody">
+
+                    <tr data-status="active">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">AL</div>
+                                <div>
+                                    <strong>Arun Kumar</strong>
+                                    <span>CL-1001</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Aruna Logistics</span>
+                        </td>
+
+                        <td>
+                            <span>+91 98765 43210</span>
+                            <small>arun@arunalogistics.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Chennai
+                        </td>
+
+                        <td>
+                            <strong>48</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge active">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action" title="View Client">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action" title="Edit Client">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="active">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">BS</div>
+                                <div>
+                                    <strong>Priya Sharma</strong>
+                                    <span>CL-1002</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Blue Star Pvt Ltd</span>
+                        </td>
+
+                        <td>
+                            <span>+91 98432 11223</span>
+                            <small>priya@bluestar.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Coimbatore
+                        </td>
+
+                        <td>
+                            <strong>36</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge active">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="pending">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">SI</div>
+                                <div>
+                                    <strong>Rahul Mehta</strong>
+                                    <span>CL-1003</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">South India Traders</span>
+                        </td>
+
+                        <td>
+                            <span>+91 99887 66554</span>
+                            <small>rahul@sitraders.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Bangalore
+                        </td>
+
+                        <td>
+                            <strong>24</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge pending">
+                                <i class="ri-time-fill"></i>
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="active">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">GE</div>
+                                <div>
+                                    <strong>Meena Raj</strong>
+                                    <span>CL-1004</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Greenfield Exports</span>
+                        </td>
+
+                        <td>
+                            <span>+91 97987 55443</span>
+                            <small>meena@greenfield.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Madurai
+                        </td>
+
+                        <td>
+                            <strong>52</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge active">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="inactive">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">MD</div>
+                                <div>
+                                    <strong>Karthik Rao</strong>
+                                    <span>CL-1005</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Metro Distributors</span>
+                        </td>
+
+                        <td>
+                            <span>+91 96677 44332</span>
+                            <small>karthik@metrodist.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Salem
+                        </td>
+
+                        <td>
+                            <strong>19</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge inactive">
+                                <i class="ri-close-circle-fill"></i>
+                                Inactive
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FLEET SECTION
+========================================================= -->
+
+<section class="fleet-section" id="fleetSection">
+
+    <!-- Fleet Header -->
+    <div class="section-heading fleet-heading">
+
+        <div>
+            <span class="section-label">LOGISTICS OPERATIONS</span>
+
+            <h1>FLEET MANAGEMENT</h1>
+
+            <p>
+                Monitor vehicles, drivers, maintenance and fleet performance.
+            </p>
+        </div>
+
+        <button class="primary-btn" id="addVehicleBtn">
+            <i class="ri-truck-line"></i>
+            Add Vehicle
+        </button>
+
+    </div>
+
+
+    <!-- Fleet Stats -->
+
+    <div class="fleet-stats">
+
+        <div class="fleet-stat-card">
+
+            <div class="fleet-stat-icon blue">
+                <i class="ri-truck-line"></i>
+            </div>
+
+            <div>
+                <span>Total Vehicles</span>
+                <strong>86</strong>
+                <small>Fleet capacity</small>
+            </div>
+
+        </div>
+
+
+        <div class="fleet-stat-card">
+
+            <div class="fleet-stat-icon green">
+                <i class="ri-road-map-line"></i>
+            </div>
+
+            <div>
+                <span>Active Vehicles</span>
+                <strong>64</strong>
+                <small>74.4% operational</small>
+            </div>
+
+        </div>
+
+
+        <div class="fleet-stat-card">
+
+            <div class="fleet-stat-icon orange">
+                <i class="ri-tools-line"></i>
+            </div>
+
+            <div>
+                <span>Maintenance</span>
+                <strong>12</strong>
+                <small>Under service</small>
+            </div>
+
+        </div>
+
+
+        <div class="fleet-stat-card">
+
+            <div class="fleet-stat-icon purple">
+                <i class="ri-gas-station-line"></i>
+            </div>
+
+            <div>
+                <span>Fuel Efficiency</span>
+                <strong>8.6 KM/L</strong>
+                <small>Fleet average</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Fleet Controls -->
+
+    <div class="fleet-controls">
+
+        <div class="fleet-tabs">
+
+            <button class="fleet-tab active" data-fleet-filter="all">
+                All Vehicles
+                <span>86</span>
+            </button>
+
+            <button class="fleet-tab" data-fleet-filter="active">
+                Active
+                <span>64</span>
+            </button>
+
+            <button class="fleet-tab" data-fleet-filter="maintenance">
+                Maintenance
+                <span>12</span>
+            </button>
+
+            <button class="fleet-tab" data-fleet-filter="offline">
+                Offline
+                <span>10</span>
+            </button>
+
+        </div>
+
+
+        <div class="fleet-search">
+
+            <i class="ri-search-line"></i>
+
+            <input
+                type="text"
+                id="fleetSearch"
+                placeholder="Search vehicle or driver..."
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Fleet Grid -->
+
+    <div class="fleet-grid" id="fleetGrid">
+
+
+        <!-- Vehicle 01 -->
+
+        <article
+            class="vehicle-card"
+            data-fleet-status="active"
+        >
+
+            <div class="vehicle-image">
+
+                <img
+                    src="./assets/fleet/truck-01.jpg"
+                    alt="Container Truck"
+                >
+
+                <span class="vehicle-status active">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    Active
+                </span>
+
+                <button class="vehicle-menu">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+                <div class="vehicle-title">
+
+                    <div>
+                        <span>VEHICLE ID</span>
+                        <h3>TN 38 AB 4521</h3>
+                    </div>
+
+                    <div class="vehicle-type-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div>
+                        <i class="ri-user-3-line"></i>
+
+                        <span>
+                            <small>Driver</small>
+                            <strong>Arun Kumar</strong>
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+
+                        <span>
+                            <small>Current Location</small>
+                            <strong>Chennai Hub</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-progress">
+
+                    <div class="progress-heading">
+                        <span>Fuel Level</span>
+                        <strong>82%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span style="width:82%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-footer">
+
+                    <div>
+                        <i class="ri-route-line"></i>
+                        <span>4,820 km</span>
+                    </div>
+
+                    <div>
+                        <i class="ri-calendar-line"></i>
+                        <span>2022</span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-actions">
+
+                    <button>
+                        <i class="ri-eye-line"></i>
+                        View
+                    </button>
+
+                    <button>
+                        <i class="ri-edit-line"></i>
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Vehicle 02 -->
+
+        <article
+            class="vehicle-card"
+            data-fleet-status="active"
+        >
+
+            <div class="vehicle-image">
+
+                <img
+                    src="./assets/fleet/truck-02.jpg"
+                    alt="Cargo Truck"
+                >
+
+                <span class="vehicle-status active">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    Active
+                </span>
+
+                <button class="vehicle-menu">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+                <div class="vehicle-title">
+
+                    <div>
+                        <span>VEHICLE ID</span>
+                        <h3>TN 37 CD 7823</h3>
+                    </div>
+
+                    <div class="vehicle-type-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div>
+                        <i class="ri-user-3-line"></i>
+
+                        <span>
+                            <small>Driver</small>
+                            <strong>Vijay Raj</strong>
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+
+                        <span>
+                            <small>Current Location</small>
+                            <strong>Coimbatore Hub</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-progress">
+
+                    <div class="progress-heading">
+                        <span>Fuel Level</span>
+                        <strong>67%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span style="width:67%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-footer">
+
+                    <div>
+                        <i class="ri-route-line"></i>
+                        <span>3,640 km</span>
+                    </div>
+
+                    <div>
+                        <i class="ri-calendar-line"></i>
+                        <span>2023</span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-actions">
+
+                    <button>
+                        <i class="ri-eye-line"></i>
+                        View
+                    </button>
+
+                    <button>
+                        <i class="ri-edit-line"></i>
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Vehicle 03 -->
+
+        <article
+            class="vehicle-card"
+            data-fleet-status="maintenance"
+        >
+
+            <div class="vehicle-image">
+
+                <img
+                    src="./assets/fleet/truck-03.jpg"
+                    alt="Heavy Duty Truck"
+                >
+
+                <span class="vehicle-status maintenance">
+                    <i class="ri-tools-fill"></i>
+                    Maintenance
+                </span>
+
+                <button class="vehicle-menu">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+                <div class="vehicle-title">
+
+                    <div>
+                        <span>VEHICLE ID</span>
+                        <h3>TN 39 EF 9124</h3>
+                    </div>
+
+                    <div class="vehicle-type-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div>
+                        <i class="ri-user-3-line"></i>
+
+                        <span>
+                            <small>Driver</small>
+                            <strong>Prakash M</strong>
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+
+                        <span>
+                            <small>Service Center</small>
+                            <strong>Madurai Hub</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-progress">
+
+                    <div class="progress-heading">
+                        <span>Fuel Level</span>
+                        <strong>42%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span style="width:42%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-footer">
+
+                    <div>
+                        <i class="ri-route-line"></i>
+                        <span>6,120 km</span>
+                    </div>
+
+                    <div>
+                        <i class="ri-calendar-line"></i>
+                        <span>2021</span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-actions">
+
+                    <button>
+                        <i class="ri-eye-line"></i>
+                        View
+                    </button>
+
+                    <button>
+                        <i class="ri-edit-line"></i>
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Vehicle 04 -->
+
+        <article
+            class="vehicle-card"
+            data-fleet-status="active"
+        >
+
+            <div class="vehicle-image">
+
+                <img
+                    src="./assets/fleet/truck-04.jpg"
+                    alt="Delivery Van"
+                >
+
+                <span class="vehicle-status active">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    Active
+                </span>
+
+                <button class="vehicle-menu">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+                <div class="vehicle-title">
+
+                    <div>
+                        <span>VEHICLE ID</span>
+                        <h3>TN 58 GH 3321</h3>
+                    </div>
+
+                    <div class="vehicle-type-icon">
+                        <i class="ri-roadster-line"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div>
+                        <i class="ri-user-3-line"></i>
+
+                        <span>
+                            <small>Driver</small>
+                            <strong>Surya K</strong>
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+
+                        <span>
+                            <small>Current Location</small>
+                            <strong>Trichy Hub</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-progress">
+
+                    <div class="progress-heading">
+                        <span>Fuel Level</span>
+                        <strong>91%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span style="width:91%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-footer">
+
+                    <div>
+                        <i class="ri-route-line"></i>
+                        <span>2,180 km</span>
+                    </div>
+
+                    <div>
+                        <i class="ri-calendar-line"></i>
+                        <span>2024</span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-actions">
+
+                    <button>
+                        <i class="ri-eye-line"></i>
+                        View
+                    </button>
+
+                    <button>
+                        <i class="ri-edit-line"></i>
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Vehicle 05 -->
+
+        <article
+            class="vehicle-card"
+            data-fleet-status="offline"
+        >
+
+            <div class="vehicle-image">
+
+                <img
+                    src="./assets/fleet/truck-05.jpg"
+                    alt="Container Truck"
+                >
+
+                <span class="vehicle-status offline">
+                    <i class="ri-close-circle-fill"></i>
+                    Offline
+                </span>
+
+                <button class="vehicle-menu">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+                <div class="vehicle-title">
+
+                    <div>
+                        <span>VEHICLE ID</span>
+                        <h3>TN 45 JK 6712</h3>
+                    </div>
+
+                    <div class="vehicle-type-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div>
+                        <i class="ri-user-3-line"></i>
+
+                        <span>
+                            <small>Driver</small>
+                            <strong>Manoj S</strong>
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+
+                        <span>
+                            <small>Last Location</small>
+                            <strong>Salem Hub</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-progress">
+
+                    <div class="progress-heading">
+                        <span>Fuel Level</span>
+                        <strong>24%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span style="width:24%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-footer">
+
+                    <div>
+                        <i class="ri-route-line"></i>
+                        <span>5,470 km</span>
+                    </div>
+
+                    <div>
+                        <i class="ri-calendar-line"></i>
+                        <span>2020</span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-actions">
+
+                    <button>
+                        <i class="ri-eye-line"></i>
+                        View
+                    </button>
+
+                    <button>
+                        <i class="ri-edit-line"></i>
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Vehicle 06 -->
+
+        <article
+            class="vehicle-card"
+            data-fleet-status="active"
+        >
+
+            <div class="vehicle-image">
+
+                <img
+                    src="./assets/fleet/truck-06.jpg"
+                    alt="Refrigerated Truck"
+                >
+
+                <span class="vehicle-status active">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    Active
+                </span>
+
+                <button class="vehicle-menu">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+                <div class="vehicle-title">
+
+                    <div>
+                        <span>VEHICLE ID</span>
+                        <h3>TN 43 LM 8245</h3>
+                    </div>
+
+                    <div class="vehicle-type-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div>
+                        <i class="ri-user-3-line"></i>
+
+                        <span>
+                            <small>Driver</small>
+                            <strong>Hari Prasad</strong>
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+
+                        <span>
+                            <small>Current Location</small>
+                            <strong>Bangalore Hub</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-progress">
+
+                    <div class="progress-heading">
+                        <span>Fuel Level</span>
+                        <strong>74%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <span style="width:74%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-footer">
+
+                    <div>
+                        <i class="ri-route-line"></i>
+                        <span>3,920 km</span>
+                    </div>
+
+                    <div>
+                        <i class="ri-calendar-line"></i>
+                        <span>2023</span>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-actions">
+
+                    <button>
+                        <i class="ri-eye-line"></i>
+                        View
+                    </button>
+
+                    <button>
+                        <i class="ri-edit-line"></i>
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LIVE TRACKING SECTION
+========================================================= -->
+
+<section class="tracking-section" id="trackingSection">
+
+    <!-- Header -->
+    <div class="tracking-header">
+
+        <div>
+            <span class="section-label">REAL-TIME OPERATIONS</span>
+            <h1>LIVE TRACKING</h1>
+            <p>Monitor active vehicles, routes and delivery progress in real time.</p>
+        </div>
+
+        <div class="tracking-live">
+            <span class="live-dot"></span>
+            LIVE
+            <small id="trackingTime">Updating...</small>
+        </div>
+
+    </div>
+
+
+    <!-- Main Tracking Layout -->
+    <div class="tracking-layout">
+
+
+        <!-- LEFT : MAP -->
+        <div class="tracking-map-card">
+
+            <div class="map-topbar">
+
+                <div>
+                    <strong>Fleet Network</strong>
+                    <span>Live vehicle positions</span>
+                </div>
+
+                <div class="map-controls">
+                    <button id="zoomIn">
+                        <i class="ri-add-line"></i>
+                    </button>
+
+                    <button id="zoomOut">
+                        <i class="ri-subtract-line"></i>
+                    </button>
+
+                    <button id="locateFleet">
+                        <i class="ri-focus-3-line"></i>
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Map -->
+            <div class="live-map" id="liveMap">
+
+                <div class="map-grid"></div>
+
+                <!-- Route -->
+                <svg class="tracking-route" viewBox="0 0 900 500">
+
+                    <path
+                        d="M110 380
+                           C180 320 180 250 260 270
+                           C340 290 350 170 430 190
+                           C510 210 530 300 610 260
+                           C690 220 720 130 810 100"
+                        class="route-shadow"
+                    />
+
+                    <path
+                        d="M110 380
+                           C180 320 180 250 260 270
+                           C340 290 350 170 430 190
+                           C510 210 530 300 610 260
+                           C690 220 720 130 810 100"
+                        class="route-line"
+                    />
+
+                </svg>
+
+
+                <!-- Route Points -->
+
+                <div class="map-point point-chennai">
+                    <span></span>
+                    <label>Chennai Hub</label>
+                </div>
+
+                <div class="map-point point-vellore">
+                    <span></span>
+                    <label>Vellore</label>
+                </div>
+
+                <div class="map-point point-salem">
+                    <span></span>
+                    <label>Salem</label>
+                </div>
+
+                <div class="map-point point-madurai">
+                    <span></span>
+                    <label>Madurai Hub</label>
+                </div>
+
+
+                <!-- Moving Truck -->
+
+                <div class="moving-truck" id="movingTruck">
+
+                    <div class="truck-pulse"></div>
+
+                    <div class="truck-marker">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                    <div class="truck-tooltip">
+                        <strong>TN 38 AB 4521</strong>
+                        <span>In Transit</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Map Labels -->
+
+                <div class="map-road road-one">NH 48</div>
+                <div class="map-road road-two">NH 44</div>
+
+                <div class="map-water"></div>
+
+            </div>
+
+
+            <!-- Map Footer -->
+
+            <div class="map-footer">
+
+                <div>
+                    <span class="legend-dot moving"></span>
+                    Moving
+                </div>
+
+                <div>
+                    <span class="legend-dot stopped"></span>
+                    Stopped
+                </div>
+
+                <div>
+                    <span class="legend-dot alert"></span>
+                    Alert
+                </div>
+
+                <span class="map-update">
+                    <i class="ri-refresh-line"></i>
+                    Updated just now
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT : VEHICLE INFO -->
+
+        <div class="tracking-sidebar">
+
+
+            <!-- Selected Vehicle -->
+
+            <div class="selected-vehicle">
+
+                <div class="selected-top">
+
+                    <div>
+                        <span class="mini-label">SELECTED VEHICLE</span>
+
+                        <h2>TN 38 AB 4521</h2>
+
+                        <p>
+                            <i class="ri-truck-line"></i>
+                            Container Truck
+                        </p>
+                    </div>
+
+                    <span class="tracking-status">
+                        <span></span>
+                        On Route
+                    </span>
+
+                </div>
+
+
+                <!-- Driver -->
+
+                <div class="driver-box">
+
+                    <div class="driver-avatar">
+                        AK
+                    </div>
+
+                    <div>
+                        <span>DRIVER</span>
+                        <strong>Arun Kumar</strong>
+                        <small>4.9 ★ · 3 yrs experience</small>
+                    </div>
+
+                    <button>
+                        <i class="ri-phone-line"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Route -->
+
+                <div class="route-info">
+
+                    <div class="route-location">
+
+                        <span class="route-marker start"></span>
+
+                        <div>
+                            <small>FROM</small>
+                            <strong>Chennai Hub</strong>
+                            <span>06 Oct · 08:40 AM</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-line-small">
+                        <span></span>
+                    </div>
+
+
+                    <div class="route-location">
+
+                        <span class="route-marker end"></span>
+
+                        <div>
+                            <small>DESTINATION</small>
+                            <strong>Madurai Hub</strong>
+                            <span>Estimated · 03:25 PM</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="tracking-progress">
+
+                    <div class="progress-top">
+                        <span>Route Progress</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="tracking-progress-bar">
+                        <span style="width:68%"></span>
+                    </div>
+
+                    <div class="progress-meta">
+                        <span>286 km completed</span>
+                        <span>134 km remaining</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Live Metrics -->
+
+            <div class="live-metrics">
+
+                <div class="live-metric">
+                    <div class="metric-icon speed">
+                        <i class="ri-speed-up-line"></i>
+                    </div>
+
+                    <span>Speed</span>
+                    <strong>64 <small>km/h</small></strong>
+                </div>
+
+
+                <div class="live-metric">
+                    <div class="metric-icon distance">
+                        <i class="ri-route-line"></i>
+                    </div>
+
+                    <span>Distance</span>
+                    <strong>134 <small>km</small></strong>
+                </div>
+
+
+                <div class="live-metric">
+                    <div class="metric-icon fuel">
+                        <i class="ri-gas-station-line"></i>
+                    </div>
+
+                    <span>Fuel</span>
+                    <strong>72 <small>%</small></strong>
+                </div>
+
+
+                <div class="live-metric">
+                    <div class="metric-icon eta">
+                        <i class="ri-time-line"></i>
+                    </div>
+
+                    <span>ETA</span>
+                    <strong>2h 15m</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Alerts -->
+
+            <div class="tracking-alerts">
+
+                <div class="alerts-header">
+                    <div>
+                        <h3>Live Alerts</h3>
+                        <span>Recent fleet activity</span>
+                    </div>
+
+                    <span class="alert-count">3</span>
+                </div>
+
+
+                <div class="alert-item warning">
+
+                    <div class="alert-icon">
+                        <i class="ri-road-map-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>Traffic detected</strong>
+                        <span>NH 44 · 4 mins ago</span>
+                    </div>
+
+                    <i class="ri-arrow-right-s-line"></i>
+
+                </div>
+
+
+                <div class="alert-item success">
+
+                    <div class="alert-icon">
+                        <i class="ri-checkbox-circle-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>Route on schedule</strong>
+                        <span>TN 38 AB 4521</span>
+                    </div>
+
+                    <i class="ri-arrow-right-s-line"></i>
+
+                </div>
+
+
+                <div class="alert-item info">
+
+                    <div class="alert-icon">
+                        <i class="ri-information-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>Fuel level normal</strong>
+                        <span>72% remaining</span>
+                    </div>
+
+                    <i class="ri-arrow-right-s-line"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Fleet Status -->
+
+    <div class="fleet-live-summary">
+
+        <div class="summary-title">
+            <div>
+                <span class="section-label">FLEET OVERVIEW</span>
+                <h2>Live Vehicle Status</h2>
+            </div>
+
+            <button>
+                View All Vehicles
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+
+
+        <div class="live-vehicles">
+
+            <div class="live-vehicle-card">
+
+                <div class="live-vehicle-icon">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div class="live-vehicle-info">
+                    <strong>TN 38 AB 4521</strong>
+                    <span>Chennai → Madurai</span>
+                </div>
+
+                <span class="live-vehicle-status moving">
+                    <i></i>
+                    Moving
+                </span>
+
+                <strong class="live-speed">64 km/h</strong>
+
+            </div>
+
+
+            <div class="live-vehicle-card">
+
+                <div class="live-vehicle-icon">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div class="live-vehicle-info">
+                    <strong>TN 37 CD 7823</strong>
+                    <span>Coimbatore → Chennai</span>
+                </div>
+
+                <span class="live-vehicle-status moving">
+                    <i></i>
+                    Moving
+                </span>
+
+                <strong class="live-speed">58 km/h</strong>
+
+            </div>
+
+
+            <div class="live-vehicle-card">
+
+                <div class="live-vehicle-icon">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div class="live-vehicle-info">
+                    <strong>TN 39 EF 9124</strong>
+                    <span>Madurai Service Center</span>
+                </div>
+
+                <span class="live-vehicle-status stopped">
+                    <i></i>
+                    Stopped
+                </span>
+
+                <strong class="live-speed">0 km/h</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="./js/admin-dashboard.js"></script>
+
+</body>
+</html>

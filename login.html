@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>STACKLY | Secure Access</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- REMIX ICON -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- AUTH CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./css/login.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="auth-background">
+
+    <div class="background-grid"></div>
+
+    <div class="glow glow-one"></div>
+
+    <div class="glow glow-two"></div>
+
+    <div class="background-line line-one"></div>
+
+    <div class="background-line line-two"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     AUTH PAGE
+===================================================== -->
+
+<main class="auth-page">
+
+
+    <!-- =================================================
+         LEFT BRAND PANEL
+    ================================================== -->
+
+    <section class="auth-brand-panel">
+
+        <!-- TOP BRAND -->
+
+<div class="brand-top">
+
+    <div class="brand-logo-area">
+
+        <div class="brand-mark">
+            <i class="ri-truck-line"></i>
+        </div>
+
+        <span>
+            STACKLY
+        </span>
+
+    </div>
+
+
+<a href="index.html" class="back-home">
+    <i class="ri-arrow-left-line"></i>
+    <span>BACK TO HOME</span>
+</a>
+
+</div>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="brand-content">
+
+
+            <span class="brand-eyebrow">
+
+                GLOBAL LOGISTICS NETWORK
+
+            </span>
+
+
+            <h1>
+
+                MOVE
+                <br>
+
+                WITH
+                <br>
+
+                <span>PRECISION.</span>
+
+            </h1>
+
+
+            <p>
+
+                One secure gateway for shipment visibility,
+                fleet intelligence and connected logistics
+                operations.
+
+            </p>
+
+
+            <!-- STATS -->
+
+            <div class="brand-stats">
+
+
+                <div class="brand-stat">
+
+                    <strong>
+                        480K
+                    </strong>
+
+                    <span>
+                        SHIPMENTS
+                    </span>
+
+                </div>
+
+
+                <div class="brand-stat">
+
+                    <strong>
+                        122
+                    </strong>
+
+                    <span>
+                        ACTIVE HUBS
+                    </span>
+
+                </div>
+
+
+                <div class="brand-stat">
+
+                    <strong>
+                        99.8%
+                    </strong>
+
+                    <span>
+                        DELIVERY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ROUTE VISUAL -->
+
+        <div class="route-visual">
+
+
+            <div class="route-line"></div>
+
+
+            <div class="route-node node-one">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="route-node node-two">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="route-node node-three">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="route-packet">
+
+                <i class="ri-arrow-right-line"></i>
+
+            </div>
+
+
+            <div class="route-label label-one">
+
+                CHN
+
+            </div>
+
+
+            <div class="route-label label-two">
+
+                MDU
+
+            </div>
+
+
+            <div class="route-label label-three">
+
+                CBE
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="brand-footer">
+
+            <span>
+                STACKLY / OPERATIONS SYSTEM
+            </span>
+
+            <span>
+                SYSTEM_01
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RIGHT AUTH PANEL
+    ================================================== -->
+
+    <section class="auth-form-panel">
+
+
+        <div class="auth-form-wrapper">
+
+
+            <!-- MOBILE LOGO -->
+
+            <div class="mobile-brand">
+
+                <div class="brand-mark">
+
+                    <i class="ri-truck-line"></i>
+
+                </div>
+
+                <span>
+                    STACKLY
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 LOGIN FORM
+            ================================================== -->
+
+            <div
+                class="auth-form login-form active"
+                id="loginForm"
+            >
+
+
+                <span class="form-eyebrow">
+
+                    SECURE ACCESS / 01
+
+                </span>
+
+
+                <h2>
+
+                    Welcome
+                    <br>
+
+                    <span>Back.</span>
+
+                </h2>
+
+
+                <p class="form-description">
+
+                    Sign in to access your logistics
+                    operations and shipment intelligence.
+
+                </p>
+
+
+                <form
+                    id="signinForm"
+                    novalidate
+                >
+
+
+                    <!-- ROLE -->
+
+                    <div class="field-group">
+
+                        <label for="loginRole">
+                            ACCESS AS
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-shield-user-line"></i>
+
+                            <select id="loginRole">
+
+                                <option value="admin">
+                                    Operations Admin
+                                </option>
+
+                                <option value="user">
+                                    Client
+                                </option>
+
+                            </select>
+
+                            <i class="ri-arrow-down-s-line select-arrow"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="field-group">
+
+                        <label for="loginEmail">
+                            BUSINESS EMAIL
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-mail-line"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="name@company.com"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="loginEmailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="field-group">
+
+                        <label for="loginPassword">
+                            PASSWORD
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-lock-line"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="loginPasswordToggle"
+                            >
+
+                                <i class="ri-eye-off-line"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="loginPasswordError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="form-options">
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                id="rememberLogin"
+                            >
+
+                            <span></span>
+
+                            Remember access
+
+                        </label>
+
+
+                        <a
+                            href="404.html"
+                            class="forgot-link"
+                        >
+
+                            Forgot password?
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+
+                        <span>
+                            ENTER DASHBOARD
+                        </span>
+
+                        <i class="ri-arrow-right-up-line"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- SWITCH -->
+
+                <div class="auth-switch">
+
+                    <span>
+                        New to Stackly?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="showSignup"
+                    >
+
+                        Create Account
+
+                    </button>
+
+                </div>
+
+
+                <div class="secure-note">
+
+                    <i class="ri-shield-check-line"></i>
+
+                    SECURE LOGISTICS ACCESS
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SIGNUP FORM
+            ================================================== -->
+
+            <div
+                class="auth-form signup-form"
+                id="signupForm"
+            >
+
+
+                <span class="form-eyebrow">
+
+                    NEW ACCESS / 02
+
+                </span>
+
+
+                <h2>
+
+                    Create
+                    <br>
+
+                    <span>Account.</span>
+
+                </h2>
+
+
+                <p class="form-description">
+
+                    Create your Stackly account and
+                    connect with your logistics network.
+
+                </p>
+
+
+                <form
+                    id="signupAuthForm"
+                    novalidate
+                >
+
+
+                    <!-- NAME -->
+
+                    <div class="field-group">
+
+                        <label for="signupName">
+                            FULL NAME
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-user-3-line"></i>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Your full name"
+                            >
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="signupNameError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- COMPANY -->
+
+                    <div class="field-group">
+
+                        <label for="signupCompany">
+                            COMPANY
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-building-line"></i>
+
+                            <input
+                                type="text"
+                                id="signupCompany"
+                                placeholder="Company name"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="field-group">
+
+                        <label for="signupEmail">
+                            BUSINESS EMAIL
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-mail-line"></i>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="name@company.com"
+                            >
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="signupEmailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="field-group">
+
+                        <label for="signupPhone">
+                            CONTACT NUMBER
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-phone-line"></i>
+
+                            <input
+                                type="tel"
+                                id="signupPhone"
+                                placeholder="10 digit number"
+                                maxlength="10"
+                            >
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="signupPhoneError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="field-group">
+
+                        <label for="signupPassword">
+                            PASSWORD
+                        </label>
+
+
+                        <div class="input-wrap">
+
+                            <i class="ri-lock-line"></i>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="signupPasswordToggle"
+                            >
+
+                                <i class="ri-eye-off-line"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+
+                        <span>
+                            CREATE ACCOUNT
+                        </span>
+
+                        <i class="ri-arrow-right-up-line"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- SWITCH -->
+
+                <div class="auth-switch">
+
+                    <span>
+                        Already registered?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="showLogin"
+                    >
+
+                        Sign In
+
+                    </button>
+
+                </div>
+
+
+                <div class="secure-note">
+
+                    <i class="ri-shield-check-line"></i>
+
+                    YOUR DATA STAYS PROTECTED
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PANEL FOOTER -->
+
+        <div class="auth-panel-footer">
+
+            <span>
+                © 2026 STACKLY LOGISTICS
+            </span>
+
+            <span>
+                PRIVATE / SECURE
+            </span>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<script src="./js/login.js"></script>
+
+</body>
+
+</html>

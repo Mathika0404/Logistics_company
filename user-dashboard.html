@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STACKLY | Logistics User Dashboard</title>
+
+    <!-- Remix Icon -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/user-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+
+        <h2 class="logo">
+            STACKLY
+        </h2>
+
+        <button
+            class="close-btn"
+            id="closeBtn"
+            type="button"
+        >
+            <i class="ri-close-line"></i>
+        </button>
+
+    </div>
+
+
+    <ul class="menu">
+
+        <li>
+            <a
+                href="#dashboard"
+                class="active"
+            >
+                <i class="ri-dashboard-3-line"></i>
+                <span>My Dashboard</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#shipments">
+                <i class="ri-truck-line"></i>
+                <span>My Shipments</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#clients">
+                <i class="ri-user-3-line"></i>
+                <span>Business Clients</span>
+            </a>
+        </li>
+
+
+<li>
+    <a href="#orders">
+        <i class="ri-file-list-3-line"></i>
+        <span>My Orders</span>
+    </a>
+</li>
+
+<li>
+    <a href="#invoices">
+        <i class="ri-bill-line"></i>
+        <span>Invoices</span>
+    </a>
+</li>
+
+    </ul>
+
+
+    <!-- EXIT -->
+
+    <div class="sidebar-exit">
+
+        <a href="index.html">
+
+            <i class="ri-logout-box-r-line"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main">
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================= -->
+
+    <header class="navbar">
+
+
+        <!-- LEFT -->
+
+        <div class="nav-left">
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+            >
+                <i class="ri-menu-line"></i>
+            </button>
+
+
+            <div class="welcome-area">
+
+                <span class="welcome-label">
+                    TRANSPORT OPERATIONS
+                </span>
+
+                <h2>
+
+                    Welcome,
+
+                    <span id="userName">
+                        User
+                    </span>
+
+                    <span class="welcome-star">
+                        ✦
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE LOGO -->
+
+        <h2 class="mobile-logo">
+            STACKLY
+        </h2>
+
+
+        <!-- RIGHT -->
+
+        <div class="nav-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <div class="icon">
+
+                <a href="404.html">
+
+                    <i class="ri-notification-3-line"></i>
+
+                    <span class="badge">
+                        2
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="icon">
+
+                <a href="404.html">
+
+                    <i class="ri-message-3-line"></i>
+
+                    <span class="badge">
+                        4
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- USER -->
+
+            <div class="profile-info">
+
+                <span class="role-label">
+                    LOGISTICS USER
+                </span>
+
+                <p
+                    class="profile-email"
+                    id="userEmail"
+                >
+                    user@example.com
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="avatar">
+
+                <i class="ri-user-3-line"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         USER DASHBOARD SECTION
+    ================================================= -->
+
+    <section
+        class="dashboard-content"
+        id="dashboardSection"
+    >
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading">
+
+            <span>
+                LOGISTICS OVERVIEW
+            </span>
+
+            <h1>
+                DASHBOARD
+            </h1>
+
+        </div>
+
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        MY ACTIVE SHIPMENTS
+                    </span>
+
+                    <h2>
+                        128
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-global-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL DELIVERIES
+                    </span>
+
+                    <h2>
+                        2,846
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-road-map-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        ACTIVE ROUTES
+                    </span>
+
+                    <h2>
+                        64
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        DELIVERY SUCCESS RATE
+                    </span>
+
+                    <h2>
+                        98.6%
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             LIVE ROUTE
+        ================================================= -->
+
+        <div class="logistics-route-card">
+
+
+            <!-- LEFT -->
+
+            <div class="route-progress">
+
+                <div class="route-status">
+
+                    <button
+                        class="route-status-btn active"
+                        data-status="transit"
+                        type="button"
+                    >
+                        <i class="ri-truck-line"></i>
+                        In Transit
+                    </button>
+
+                    <button
+                        class="route-status-btn"
+                        data-status="pending"
+                        type="button"
+                    >
+                        <i class="ri-time-line"></i>
+                        Pending
+                    </button>
+
+                    <button
+                        class="route-status-btn"
+                        data-status="delivered"
+                        type="button"
+                    >
+                        <i class="ri-checkbox-circle-line"></i>
+                        Delivered
+                    </button>
+
+                </div>
+
+
+                <div class="delivery-progress">
+
+                    <span class="progress-label">
+                        DELIVERY PROGRESS
+                    </span>
+
+                    <div class="progress-number">
+
+                        <span id="fleetProgress">
+                            68
+                        </span>
+
+                        <small>
+                            %
+                        </small>
+
+                    </div>
+
+                    <div class="fleet-progress-bar">
+
+                        <span
+                            id="fleetProgressBar"
+                            style="width:68%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="route-stats">
+
+
+                    <div class="route-stat">
+
+                        <div class="route-stat-icon">
+                            <i class="ri-route-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                DISTANCE COVERED
+                            </span>
+
+                            <strong id="distanceCovered">
+                                420 km
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-stat">
+
+                        <div class="route-stat-icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                ESTIMATED ARRIVAL
+                            </span>
+
+                            <strong id="estimatedArrival">
+                                1h 35 min
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MAP -->
+
+            <div class="logistics-map">
+
+                <div class="map-background"></div>
+
+                <div class="map-road road-1"></div>
+                <div class="map-road road-2"></div>
+                <div class="map-road road-3"></div>
+                <div class="map-road road-4"></div>
+
+
+                <svg
+                    class="delivery-route"
+                    viewBox="0 0 600 350"
+                    preserveAspectRatio="none"
+                >
+
+                    <path
+                        class="route-shadow"
+                        d="
+                        M30 280
+                        C100 275 115 220 175 235
+                        C235 250 250 175 305 185
+                        C355 195 375 110 430 125
+                        C480 140 500 70 555 80
+                        C575 83 590 70 600 60
+                        "
+                    ></path>
+
+
+                    <path
+                        class="route-path"
+                        d="
+                        M30 280
+                        C100 275 115 220 175 235
+                        C235 250 250 175 305 185
+                        C355 195 375 110 430 125
+                        C480 140 500 70 555 80
+                        C575 83 590 70 600 60
+                        "
+                    ></path>
+
+                </svg>
+
+
+                <!-- ORIGIN -->
+
+                <div class="route-location origin">
+
+                    <span class="route-dot"></span>
+
+                    <div class="location-info">
+
+                        <small>
+                            ORIGIN
+                        </small>
+
+                        <strong>
+                            Chennai Hub
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VEHICLE -->
+
+                <div class="current-vehicle">
+
+                    <div class="vehicle-pulse"></div>
+
+                    <div class="vehicle-icon">
+
+                        <i class="ri-truck-line"></i>
+
+                    </div>
+
+                    <div class="vehicle-info">
+
+                        <strong>
+                            TN 38 AB 4521
+                        </strong>
+
+                        <span>
+                            En Route
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINATION -->
+
+                <div class="route-location destination">
+
+                    <span class="destination-dot"></span>
+
+                    <div class="location-info">
+
+                        <small>
+                            DESTINATION
+                        </small>
+
+                        <strong>
+                            Madurai Hub
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ZOOM -->
+
+                <div class="map-zoom">
+
+                    <button
+                        id="zoomIn"
+                        type="button"
+                    >
+                        <i class="ri-add-line"></i>
+                    </button>
+
+                    <button
+                        id="zoomOut"
+                        type="button"
+                    >
+                        <i class="ri-subtract-line"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ALERTS -->
+
+            <div class="route-alerts">
+
+                <div class="alerts-heading">
+
+                    <h3>
+                        Delivery Alerts
+                    </h3>
+
+                    <button
+                        id="viewDelivery Alerts"
+                        type="button"
+                        onclick="window.location.href='404.html'"
+                    >
+                        View all
+                    </button>
+
+                </div>
+
+
+                <div class="route-alert">
+
+                    <div class="alert-symbol warning">
+                        <i class="ri-error-warning-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Route Alert
+                        </strong>
+
+                        <p>
+                            Traffic detected on the current delivery route. Please allow additional travel time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="route-alert">
+
+                    <div class="alert-symbol success">
+                        <i class="ri-checkbox-circle-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            On Schedule
+                        </strong>
+
+                        <p>
+                            Your shipment is currently on schedule for delivery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="alert-details"
+                    id="alertDetails"
+                    type="button"
+                >
+
+                    View Delivery Details
+
+                    <i class="ri-arrow-right-line"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MY SHIPMENTS SECTION
+         
+         IMPORTANT:
+         This is INSIDE .main
+    ================================================= -->
+
+    <section
+        class="shipments-section"
+        id="shipmentsSection"
+    >
+
+
+        <!-- HEADER -->
+
+        <div class="shipments-heading">
+
+            <div class="shipments-title">
+
+                <span>
+                    TRANSPORT OPERATIONS
+                </span>
+
+                <h1>
+                    SHIPMENTS
+                </h1>
+
+                <p>
+                    View your shipments, delivery progress and current transport status.
+                </p>
+
+            </div>
+
+
+            <button
+                class="new-shipment-btn"
+                id="newShipmentBtn"
+                type="button"
+                onclick="window.location.href='404.html'"
+            >
+
+                <i class="ri-add-line"></i>
+
+                <span>
+                    Create Shipment
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- SHIPMENT STATS -->
+
+        <div class="shipment-stats">
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon blue">
+                    <i class="ri-truck-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        IN TRANSIT
+                    </span>
+
+                    <h2>
+                        84
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon orange">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        PENDING
+                    </span>
+
+                    <h2>
+                        32
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon green">
+                    <i class="ri-checkbox-circle-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        DELIVERED
+                    </span>
+
+                    <h2>
+                        126
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="shipment-stat-card">
+
+                <div class="shipment-stat-icon purple">
+                    <i class="ri-route-line"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL SHIPMENTS
+                    </span>
+
+                    <h2>
+                        242
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SHIPMENT TABLE -->
+
+        <div class="shipment-table-card">
+
+
+            <div class="shipment-table-header">
+
+                <div>
+
+                    <h3>
+                        My Shipment Overview
+                    </h3>
+
+                    <p>
+                        Recent shipment activity and delivery progress
+                    </p>
+
+                </div>
+
+
+                <div class="shipment-filter">
+
+                    <button
+                        class="shipment-filter-btn active"
+                        data-filter="all"
+                        type="button"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="shipment-filter-btn"
+                        data-filter="in-transit"
+                        type="button"
+                    >
+                        In Transit
+                    </button>
+
+                    <button
+                        class="shipment-filter-btn"
+                        data-filter="pending"
+                        type="button"
+                    >
+                        Pending
+                    </button>
+
+                    <button
+                        class="shipment-filter-btn"
+                        data-filter="delivered"
+                        type="button"
+                    >
+                        Delivered
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="shipment-table-wrapper">
+
+                <table class="shipment-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                SHIPMENT ID
+                            </th>
+
+                            <th>
+                                CUSTOMER
+                            </th>
+
+                            <th>
+                                ROUTE
+                            </th>
+
+                            <th>
+                                DATE
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                PROGRESS
+                            </th>
+
+                            <th>
+                                VIEW
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="shipmentTableBody">
+
+
+                        <!-- ROW 1 -->
+
+                        <tr data-status="in-transit">
+
+                            <td>
+                                <strong>
+                                    #STK-1024
+                                </strong>
+                            </td>
+
+                            <td>
+                                Aruna Logistics
+                            </td>
+
+                            <td>
+                                Chennai → Madurai
+                            </td>
+
+                            <td>
+                                06 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status transit">
+                                    In Transit
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        72%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:72%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                    title="View Shipment"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 2 -->
+
+                        <tr data-status="pending">
+
+                            <td>
+                                <strong>
+                                    #STK-1025
+                                </strong>
+                            </td>
+
+                            <td>
+                                Blue Star Pvt Ltd
+                            </td>
+
+                            <td>
+                                Coimbatore → Chennai
+                            </td>
+
+                            <td>
+                                06 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        28%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:28%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 3 -->
+
+                        <tr data-status="delivered">
+
+                            <td>
+                                <strong>
+                                    #STK-1026
+                                </strong>
+                            </td>
+
+                            <td>
+                                South India Traders
+                            </td>
+
+                            <td>
+                                Bangalore → Salem
+                            </td>
+
+                            <td>
+                                05 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status delivered">
+                                    Delivered
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        100%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:100%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 4 -->
+
+                        <tr data-status="in-transit">
+
+                            <td>
+                                <strong>
+                                    #STK-1027
+                                </strong>
+                            </td>
+
+                            <td>
+                                Greenfield Exports
+                            </td>
+
+                            <td>
+                                Madurai → Trichy
+                            </td>
+
+                            <td>
+                                05 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status transit">
+                                    In Transit
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        61%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:61%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 5 -->
+
+                        <tr data-status="pending">
+
+                            <td>
+                                <strong>
+                                    #STK-1028
+                                </strong>
+                            </td>
+
+                            <td>
+                                Metro Distributors
+                            </td>
+
+                            <td>
+                                Chennai → Salem
+                            </td>
+
+                            <td>
+                                05 Oct 2026
+                            </td>
+
+                            <td>
+
+                                <span class="shipment-status pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="shipment-progress">
+
+                                    <span>
+                                        15%
+                                    </span>
+
+                                    <div>
+                                        <i style="width:15%;"></i>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="shipment-action"
+                                    type="button"
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ================= CUSTOMERS SECTION ================= -->
+<section class="clients-section" id="clientsSection">
+
+    <div class="section-heading">
+        <div>
+            <span class="section-label">TRANSPORT OPERATIONS</span>
+            <h1>CUSTOMERS</h1>
+            <p>View your business clients, accounts and shipment relationships.</p>
+        </div>
+
+        <button class="primary-btn" id="addClientBtn" onclick="window.location.href='404.html'">
+            <i class="ri-user-add-line"></i>
+            Add Business Client
+        </button>
+    </div>
+
+    <!-- Client Stats -->
+    <div class="client-stats">
+
+        <div class="client-stat-card">
+            <div class="stat-icon blue">
+                <i class="ri-group-line"></i>
+            </div>
+            <div>
+                <span>Total Business Clients</span>
+                <strong>186</strong>
+                <small>+12 this month</small>
+            </div>
+        </div>
+
+        <div class="client-stat-card">
+            <div class="stat-icon green">
+                <i class="ri-checkbox-circle-line"></i>
+            </div>
+            <div>
+                <span>Active Accounts</span>
+                <strong>142</strong>
+                <small>76.3% of total</small>
+            </div>
+        </div>
+
+        <div class="client-stat-card">
+            <div class="stat-icon orange">
+                <i class="ri-time-line"></i>
+            </div>
+            <div>
+                <span>Pending Accounts</span>
+                <strong>18</strong>
+                <small>Awaiting approval</small>
+            </div>
+        </div>
+
+        <div class="client-stat-card">
+            <div class="stat-icon purple">
+                <i class="ri-building-line"></i>
+            </div>
+            <div>
+                <span>Enterprise Accounts</span>
+                <strong>96</strong>
+                <small>Enterprise clients</small>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Client Table -->
+    <div class="clients-table-card">
+
+        <div class="table-top">
+
+            <div class="table-title">
+                <h2>Business Client Directory</h2>
+                <p>View your registered business clients and shipment activity.</p>
+            </div>
+
+            <div class="client-tools">
+
+                <div class="client-search">
+                    <i class="ri-search-line"></i>
+                    <input
+                        type="text"
+                        id="clientSearch"
+                        placeholder="Search clients..."
+                    >
+                </div>
+
+                <select id="clientFilter">
+                    <option value="all">All Accounts</option>
+                    <option value="active">Active</option>
+                    <option value="pending">Pending</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="clients-table-wrapper">
+
+            <table class="clients-table">
+
+                <thead>
+                    <tr>
+                        <th>CUSTOMER</th>
+                        <th>COMPANY</th>
+                        <th>CONTACT</th>
+                        <th>LOCATION</th>
+                        <th>SHIPMENTS</th>
+                        <th>STATUS</th>
+                        <th>VIEW</th>
+                    </tr>
+                </thead>
+
+                <tbody id="clientsTableBody">
+
+                    <tr data-status="active">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">AL</div>
+                                <div>
+                                    <strong>Arun Kumar</strong>
+                                    <span>CL-1001</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Aruna Logistics</span>
+                        </td>
+
+                        <td>
+                            <span>+91 98765 43210</span>
+                            <small>arun@arunalogistics.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Chennai
+                        </td>
+
+                        <td>
+                            <strong>48</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge active">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action" title="View Client" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action" title="Edit Client" onclick="window.location.href='404.html'">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="active">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">BS</div>
+                                <div>
+                                    <strong>Priya Sharma</strong>
+                                    <span>CL-1002</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Blue Star Pvt Ltd</span>
+                        </td>
+
+                        <td>
+                            <span>+91 98432 11223</span>
+                            <small>priya@bluestar.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Coimbatore
+                        </td>
+
+                        <td>
+                            <strong>36</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge active">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="pending">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">SI</div>
+                                <div>
+                                    <strong>Rahul Mehta</strong>
+                                    <span>CL-1003</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">South India Traders</span>
+                        </td>
+
+                        <td>
+                            <span>+91 99887 66554</span>
+                            <small>rahul@sitraders.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Bangalore
+                        </td>
+
+                        <td>
+                            <strong>24</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge pending">
+                                <i class="ri-time-fill"></i>
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="active">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">GE</div>
+                                <div>
+                                    <strong>Meena Raj</strong>
+                                    <span>CL-1004</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Greenfield Exports</span>
+                        </td>
+
+                        <td>
+                            <span>+91 97987 55443</span>
+                            <small>meena@greenfield.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Madurai
+                        </td>
+
+                        <td>
+                            <strong>52</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge active">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line" ></i>
+                            </button>
+
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr data-status="inactive">
+                        <td>
+                            <div class="client-info">
+                                <div class="client-avatar">MD</div>
+                                <div>
+                                    <strong>Karthik Rao</strong>
+                                    <span>CL-1005</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span class="company-name">Metro Distributors</span>
+                        </td>
+
+                        <td>
+                            <span>+91 96677 44332</span>
+                            <small>karthik@metrodist.com</small>
+                        </td>
+
+                        <td>
+                            <i class="ri-map-pin-line"></i>
+                            Salem
+                        </td>
+
+                        <td>
+                            <strong>19</strong>
+                        </td>
+
+                        <td>
+                            <span class="status-badge inactive">
+                                <i class="ri-close-circle-fill"></i>
+                                Inactive
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button class="client-action" onclick="window.location.href='404.html'">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MY ORDERS SECTION
+========================================================= -->
+
+<section class="orders-section" id="ordersSection">
+
+    <div class="section-heading orders-heading">
+
+        <div>
+            <span class="section-label">LOGISTICS OPERATIONS</span>
+            <h1>MY ORDERS</h1>
+            <p>
+                View and manage your shipment orders, delivery status and order history.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Order Stats -->
+
+    <div class="order-stats">
+
+        <div class="order-stat-card">
+            <div class="order-stat-icon blue">
+                <i class="ri-shopping-bag-3-line"></i>
+            </div>
+
+            <div>
+                <span>Total Orders</span>
+                <strong>248</strong>
+                <small>All shipment orders</small>
+            </div>
+        </div>
+
+
+        <div class="order-stat-card">
+            <div class="order-stat-icon orange">
+                <i class="ri-time-line"></i>
+            </div>
+
+            <div>
+                <span>Pending Orders</span>
+                <strong>18</strong>
+                <small>Waiting for processing</small>
+            </div>
+        </div>
+
+
+        <div class="order-stat-card">
+            <div class="order-stat-icon blue">
+                <i class="ri-truck-line"></i>
+            </div>
+
+            <div>
+                <span>In Transit</span>
+                <strong>42</strong>
+                <small>Currently on route</small>
+            </div>
+        </div>
+
+
+        <div class="order-stat-card">
+            <div class="order-stat-icon green">
+                <i class="ri-checkbox-circle-line"></i>
+            </div>
+
+            <div>
+                <span>Delivered</span>
+                <strong>188</strong>
+                <small>Successfully delivered</small>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Order Controls -->
+
+    <div class="orders-controls">
+
+        <div class="order-tabs">
+
+            <button class="order-tab active" data-order-filter="all">
+                All Orders
+                <span>248</span>
+            </button>
+
+            <button class="order-tab" data-order-filter="pending">
+                Pending
+                <span>18</span>
+            </button>
+
+            <button class="order-tab" data-order-filter="transit">
+                In Transit
+                <span>42</span>
+            </button>
+
+            <button class="order-tab" data-order-filter="delivered">
+                Delivered
+                <span>188</span>
+            </button>
+
+        </div>
+
+
+        <div class="order-search">
+
+            <i class="ri-search-line"></i>
+
+            <input
+                type="text"
+                id="orderSearch"
+                placeholder="Search order ID..."
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Orders Table -->
+
+    <div class="orders-card">
+
+        <div class="orders-card-header">
+
+            <div>
+                <span class="section-label">RECENT ACTIVITY</span>
+                <h2>My Shipment Orders</h2>
+                <p>
+                    Track your recent orders and delivery progress.
+                </p>
+            </div>
+
+            <button class="secondary-btn" onclick="window.location.href='404.html'">
+                View All
+                <i class="ri-arrow-right-line"></i>
+            </button>
+
+        </div>
+
+
+        <div class="orders-table-wrapper">
+
+            <table class="orders-table">
+
+                <thead>
+                    <tr>
+                        <th>ORDER ID</th>
+                        <th>DESTINATION</th>
+                        <th>ORDER DATE</th>
+                        <th>DELIVERY DATE</th>
+                        <th>STATUS</th>
+                        <th>PROGRESS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ordersTableBody">
+
+                    <tr data-order-status="transit">
+
+                        <td>
+                            <strong>#ORD-10248</strong>
+                        </td>
+
+                        <td>
+                            <div class="order-location">
+                                <i class="ri-map-pin-line"></i>
+                                <span>Chennai → Madurai</span>
+                            </div>
+                        </td>
+
+                        <td>06 Oct 2026</td>
+
+                        <td>07 Oct 2026</td>
+
+                        <td>
+                            <span class="order-status transit">
+                                <i class="ri-truck-line"></i>
+                                In Transit
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="order-progress">
+                                <div class="progress-bar">
+                                    <span style="width:68%"></span>
+                                </div>
+                                <small>68%</small>
+                            </div>
+                        </td>
+
+                        <td>
+                            <button class="order-view-btn" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                                View
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-order-status="pending">
+
+                        <td>
+                            <strong>#ORD-10247</strong>
+                        </td>
+
+                        <td>
+                            <div class="order-location">
+                                <i class="ri-map-pin-line"></i>
+                                <span>Coimbatore → Chennai</span>
+                            </div>
+                        </td>
+
+                        <td>06 Oct 2026</td>
+
+                        <td>08 Oct 2026</td>
+
+                        <td>
+                            <span class="order-status pending">
+                                <i class="ri-time-line"></i>
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="order-progress">
+                                <div class="progress-bar">
+                                    <span style="width:24%"></span>
+                                </div>
+                                <small>24%</small>
+                            </div>
+                        </td>
+
+                        <td>
+                            <button class="order-view-btn" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                                View
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-order-status="delivered">
+
+                        <td>
+                            <strong>#ORD-10246</strong>
+                        </td>
+
+                        <td>
+                            <div class="order-location">
+                                <i class="ri-map-pin-line"></i>
+                                <span>Bangalore → Madurai</span>
+                            </div>
+                        </td>
+
+                        <td>04 Oct 2026</td>
+
+                        <td>05 Oct 2026</td>
+
+                        <td>
+                            <span class="order-status delivered">
+                                <i class="ri-checkbox-circle-line"></i>
+                                Delivered
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="order-progress">
+                                <div class="progress-bar">
+                                    <span style="width:100%"></span>
+                                </div>
+                                <small>100%</small>
+                            </div>
+                        </td>
+
+                        <td>
+                            <button class="order-view-btn" onclick="window.location.href='404.html'">
+                                <i class="ri-eye-line"></i>
+                                View
+                            </button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INVOICES SECTION
+========================================================= -->
+
+<section class="invoices-section" id="invoicesSection">
+
+    <div class="section-heading invoices-heading">
+
+        <div>
+            <span class="section-label">BILLING & PAYMENTS</span>
+            <h1>INVOICES</h1>
+            <p>
+                View your shipment invoices, payment status and billing history.
+            </p>
+        </div>
+
+        <button class="secondary-btn" id="downloadAllInvoices">
+            <i class="ri-download-2-line"></i>
+            Download All
+        </button>
+
+    </div>
+
+
+    <!-- Invoice Stats -->
+
+    <div class="invoice-stats">
+
+        <div class="invoice-stat-card">
+
+            <div class="invoice-stat-icon blue">
+                <i class="ri-file-text-line"></i>
+            </div>
+
+            <div>
+                <span>Total Invoices</span>
+                <strong>186</strong>
+                <small>All billing records</small>
+            </div>
+
+        </div>
+
+
+        <div class="invoice-stat-card">
+
+            <div class="invoice-stat-icon green">
+                <i class="ri-checkbox-circle-line"></i>
+            </div>
+
+            <div>
+                <span>Paid</span>
+                <strong>164</strong>
+                <small>Successfully paid</small>
+            </div>
+
+        </div>
+
+
+        <div class="invoice-stat-card">
+
+            <div class="invoice-stat-icon orange">
+                <i class="ri-time-line"></i>
+            </div>
+
+            <div>
+                <span>Pending</span>
+                <strong>16</strong>
+                <small>Payment pending</small>
+            </div>
+
+        </div>
+
+
+        <div class="invoice-stat-card">
+
+            <div class="invoice-stat-icon red">
+                <i class="ri-error-warning-line"></i>
+            </div>
+
+            <div>
+                <span>Overdue</span>
+                <strong>06</strong>
+                <small>Requires attention</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Invoice Table -->
+
+    <div class="invoices-card">
+
+        <div class="invoices-card-header">
+
+            <div>
+                <span class="section-label">BILLING HISTORY</span>
+                <h2>Recent Invoices</h2>
+                <p>
+                    Review your latest logistics and shipment invoices.
+                </p>
+            </div>
+
+
+            <div class="invoice-filter">
+
+                <select id="invoiceStatusFilter">
+
+                    <option value="all">All Invoices</option>
+                    <option value="paid">Paid</option>
+                    <option value="pending">Pending</option>
+                    <option value="overdue">Overdue</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="invoice-table-wrapper">
+
+            <table class="invoice-table">
+
+                <thead>
+
+                    <tr>
+                        <th>INVOICE ID</th>
+                        <th>ORDER ID</th>
+                        <th>DATE</th>
+                        <th>AMOUNT</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="invoiceTableBody">
+
+                    <tr data-invoice-status="paid">
+
+                        <td>
+                            <strong>#INV-80421</strong>
+                        </td>
+
+                        <td>#ORD-10248</td>
+
+                        <td>06 Oct 2026</td>
+
+                        <td>
+                            <strong>₹18,450</strong>
+                        </td>
+
+                        <td>
+                            <span class="invoice-status paid">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Paid
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="invoice-actions">
+
+                                <button title="View Invoice">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button title="Download Invoice">
+                                    <i class="ri-download-2-line"></i>
+                                </button>
+
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-invoice-status="pending">
+
+                        <td>
+                            <strong>#INV-80420</strong>
+                        </td>
+
+                        <td>#ORD-10247</td>
+
+                        <td>06 Oct 2026</td>
+
+                        <td>
+                            <strong>₹12,800</strong>
+                        </td>
+
+                        <td>
+                            <span class="invoice-status pending">
+                                <i class="ri-time-line"></i>
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="invoice-actions">
+
+                                <button title="View Invoice">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button title="Download Invoice">
+                                    <i class="ri-download-2-line"></i>
+                                </button>
+
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-invoice-status="paid">
+
+                        <td>
+                            <strong>#INV-80419</strong>
+                        </td>
+
+                        <td>#ORD-10246</td>
+
+                        <td>05 Oct 2026</td>
+
+                        <td>
+                            <strong>₹21,600</strong>
+                        </td>
+
+                        <td>
+                            <span class="invoice-status paid">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                Paid
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="invoice-actions">
+
+                                <button title="View Invoice">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button title="Download Invoice">
+                                    <i class="ri-download-2-line"></i>
+                                </button>
+
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-invoice-status="overdue">
+
+                        <td>
+                            <strong>#INV-80418</strong>
+                        </td>
+
+                        <td>#ORD-10241</td>
+
+                        <td>02 Oct 2026</td>
+
+                        <td>
+                            <strong>₹9,750</strong>
+                        </td>
+
+                        <td>
+                            <span class="invoice-status overdue">
+                                <i class="ri-error-warning-fill"></i>
+                                Overdue
+                            </span>
+                        </td>
+
+                        <td>
+                            <div class="invoice-actions">
+
+                                <button title="View Invoice">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button title="Download Invoice">
+                                    <i class="ri-download-2-line"></i>
+                                </button>
+
+                            </div>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="./js/user-dashboard.js"></script>
+
+</body>
+</html>
