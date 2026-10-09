@@ -1362,3 +1362,20 @@ if (logisticsLivePulse) {
     }
 
 }
+
+
+function subscribeTo404() {
+    const emailField = document.getElementById("logisticsEmail");
+
+    if (!emailField || emailField.value.trim() === "") {
+        alert("Please enter your email address.");
+        return;
+    }
+
+    if (!emailField.checkValidity()) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    window.location.href = "./404.html";
+}

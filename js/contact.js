@@ -933,8 +933,9 @@ if (contactForm) {
                         false;
 
                 }
+                window.location.href = "./404.html";
 
-            }, 4000);
+            }, 1500);
 
         }
     );
