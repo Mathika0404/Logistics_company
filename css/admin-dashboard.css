@@ -85,15 +85,18 @@ select {
 }
 
 
-.logo {
-    color: #fff;
-
-    font-size: 23px;
-    font-weight: 800;
-
-    letter-spacing: 2px;
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
+.sidebar-logo img {
+    width: 140px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
 
 .close-btn {
     display: none;
@@ -1257,7 +1260,7 @@ select {
 
     color: #858b91;
 
-    font-size: 9px;
+    font-size: 12px;
 
     cursor: pointer;
 }
@@ -1304,7 +1307,7 @@ select {
 
     margin-bottom: 4px;
 
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -1313,7 +1316,7 @@ select {
 
     color: #92979c;
 
-    font-size: 8px;
+    font-size: 10px;
 
     line-height: 1.55;
 }
@@ -1656,7 +1659,7 @@ select {
 .shipment-table-header p {
     color: #92979c;
 
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -4477,7 +4480,7 @@ select {
 
     border-radius: 8px;
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .metric-icon.speed {
@@ -4503,7 +4506,7 @@ select {
 .live-metric > span {
     display: block;
     color: #919aa8;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .live-metric > strong {
@@ -4511,12 +4514,12 @@ select {
     margin-top: 3px;
 
     color: #263044;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .live-metric small {
     color: #9aa3b0;
-    font-size: 7px;
+    font-size: 10px;
 }
 
 
@@ -4546,12 +4549,12 @@ select {
     margin: 0;
 
     color: #273145;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .alerts-header span {
     color: #9aa3b0;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .alert-count {
@@ -4567,7 +4570,7 @@ select {
     background: #f1f3f6;
     color: #5e6878 !important;
 
-    font-size: 8px !important;
+    font-size: 10px !important;
     font-weight: 800;
 }
 
@@ -4594,7 +4597,7 @@ select {
 
     border-radius: 8px;
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .alert-item.warning .alert-icon {
@@ -4664,7 +4667,7 @@ select {
     margin: 3px 0 0;
 
     color: #263044;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .summary-title button {
@@ -4672,7 +4675,7 @@ select {
     background: transparent;
 
     color: #586477;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
 
     cursor: pointer;
@@ -4740,7 +4743,7 @@ select {
     white-space: nowrap;
 
     color: #3b4557;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .live-vehicle-info span {
@@ -4752,7 +4755,7 @@ select {
     white-space: nowrap;
 
     color: #9ba3b0;
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .live-vehicle-status {
@@ -4762,7 +4765,7 @@ select {
     align-items: center;
     gap: 4px;
 
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 700;
 }
 
@@ -5000,3 +5003,65 @@ select {
 }
 
 
+/* MOBILE ADMIN EMAIL */
+.sidebar-mobile-profile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .sidebar-mobile-profile {
+        display: block;
+        padding: 15px 20px;
+        margin: 0 15px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        overflow-wrap: anywhere;
+    }
+
+    .sidebar-mobile-profile span {
+        display: block;
+        color: #05c7f7;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin-bottom: 7px;
+    }
+
+    .sidebar-mobile-profile p {
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+}
+
+.sidebar-mobile-profile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar-mobile-profile {
+        display: block;
+        padding: 15px 20px;
+        margin: 0 15px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        overflow-wrap: anywhere;
+    }
+
+    .sidebar-mobile-profile span {
+        display: block;
+        color: #05c7f7;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+
+    .sidebar-mobile-profile p {
+        color: #fff;
+        font-size: 12px;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+}

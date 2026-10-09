@@ -18,6 +18,9 @@ const userNameElement =
 const userEmailElement =
     document.getElementById("userEmail");
 
+const mobileUserEmail =
+    document.getElementById("mobileUserEmail");
+
 
 if (loggedInEmail) {
 
@@ -26,6 +29,10 @@ if (loggedInEmail) {
             .split("@")[0]
             .replace(/[._-]/g, " ")
             .trim();
+
+if (mobileUserEmail && loggedInEmail) {
+    mobileUserEmail.textContent = loggedInEmail;
+}
 
 
     name =

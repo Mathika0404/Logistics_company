@@ -3599,7 +3599,7 @@ header{
 
     color: #eee;
 
-    font-size: 8px;
+    font-size: 12px;
 
     font-weight: 600;
 }
@@ -3613,7 +3613,7 @@ header{
 
     color: #666;
 
-    font-size: 8px;
+    font-size: 10px;
 }
 
 
@@ -8306,727 +8306,6 @@ header{
 
 }
 
-/* =========================================================
-   SMART TRANSIT
-   CINEMATIC SECTION SCROLL ANIMATION
-========================================================= */
-
-/* Initial section state */
-.sustainability-section {
-
-    opacity: 0;
-
-    transform:
-        translateY(120px)
-        scale(.94);
-
-    filter:
-        blur(8px);
-
-    transition:
-        opacity 1.1s cubic-bezier(.16,1,.3,1),
-        transform 1.3s cubic-bezier(.16,1,.3,1),
-        filter 1.1s ease;
-
-}
-
-
-/* =========================================================
-   SECTION ENTER
-========================================================= */
-
-.sustainability-section.sustain-visible {
-
-    opacity: 1;
-
-    transform:
-        translateY(0)
-        scale(1);
-
-    filter:
-        blur(0);
-
-}
-
-
-/* =========================================================
-   CONTENT SLIDE
-========================================================= */
-
-.sustain-content {
-
-    opacity: 0;
-
-    transform:
-        translateX(-100px)
-        rotateY(8deg);
-
-    transition:
-        opacity 1s cubic-bezier(.16,1,.3,1) .15s,
-        transform 1.2s cubic-bezier(.16,1,.3,1) .15s;
-
-}
-
-
-.sustainability-section.sustain-visible
-.sustain-content {
-
-    opacity: 1;
-
-    transform:
-        translateX(0)
-        rotateY(0);
-
-}
-
-
-/* =========================================================
-   IMAGE SLIDE FROM RIGHT
-========================================================= */
-
-.sustain-image {
-
-    opacity: 0;
-
-    transform:
-        translateX(120px)
-        scale(.88)
-        rotateY(-12deg);
-
-    transition:
-        opacity 1.2s cubic-bezier(.16,1,.3,1) .2s,
-        transform 1.4s cubic-bezier(.16,1,.3,1) .2s;
-
-}
-
-
-.sustainability-section.sustain-visible
-.sustain-image {
-
-    opacity: 1;
-
-    transform:
-        translateX(0)
-        scale(1)
-        rotateY(0);
-
-}
-
-
-/* =========================================================
-   HEADING REVEAL
-========================================================= */
-
-.sustain-content h2 {
-
-    opacity: 0;
-
-    transform:
-        translateY(70px)
-        scale(.9)
-        rotateX(-35deg);
-
-}
-
-
-.sustainability-section.sustain-visible
-.sustain-content h2 {
-
-    animation:
-        transitHeadingReveal
-        1s
-        cubic-bezier(.16,1,.3,1)
-        .35s
-        forwards;
-
-}
-
-
-@keyframes transitHeadingReveal {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(70px)
-            scale(.9)
-            rotateX(-35deg);
-
-        filter:
-            blur(8px);
-    }
-
-    65% {
-
-        opacity: 1;
-
-        transform:
-            translateY(-8px)
-            scale(1.02)
-            rotateX(4deg);
-
-        filter:
-            blur(1px);
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1)
-            rotateX(0);
-
-        filter:
-            blur(0);
-    }
-
-}
-
-
-/* =========================================================
-   DESCRIPTION REVEAL
-========================================================= */
-
-.sustain-content p {
-
-    opacity: 0;
-
-    transform:
-        translateY(35px);
-
-}
-
-
-.sustainability-section.sustain-visible
-.sustain-content p {
-
-    animation:
-        transitParagraphReveal
-        .8s
-        cubic-bezier(.16,1,.3,1)
-        .75s
-        forwards;
-
-}
-
-
-@keyframes transitParagraphReveal {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(35px);
-
-        filter:
-            blur(5px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-        filter:
-            blur(0);
-    }
-
-}
-
-
-/* =========================================================
-   STAT CARDS
-========================================================= */
-
-.sustain-stats {
-
-    perspective: 900px;
-
-}
-
-
-.sustainability-section.sustain-visible
-.stat-box:nth-child(1) {
-
-    animation:
-        transitStatIn
-        .8s
-        cubic-bezier(.16,1,.3,1)
-        .95s
-        forwards;
-
-}
-
-
-.sustainability-section.sustain-visible
-.stat-box:nth-child(2) {
-
-    animation:
-        transitStatIn
-        .8s
-        cubic-bezier(.16,1,.3,1)
-        1.15s
-        forwards;
-
-}
-
-
-@keyframes transitStatIn {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(60px)
-            rotateX(35deg)
-            scale(.88);
-
-    }
-
-    65% {
-
-        opacity: 1;
-
-        transform:
-            translateY(-5px)
-            rotateX(-3deg)
-            scale(1.02);
-
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            rotateX(0)
-            scale(1);
-
-    }
-
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.sustainability-section.sustain-visible
-.report-btn {
-
-    animation:
-        transitButtonReveal
-        .8s
-        cubic-bezier(.16,1,.3,1)
-        1.4s
-        forwards;
-
-}
-
-
-@keyframes transitButtonReveal {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(35px)
-            scale(.9);
-
-    }
-
-    70% {
-
-        opacity: 1;
-
-        transform:
-            translateY(-4px)
-            scale(1.03);
-
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-}
-
-
-/* =========================================================
-   IMAGE CINEMATIC REVEAL
-========================================================= */
-
-.sustainability-section.sustain-visible
-.sustain-image img {
-
-    animation:
-        transitImageReveal
-        1.8s
-        cubic-bezier(.16,1,.3,1)
-        .25s
-        forwards;
-
-}
-
-
-@keyframes transitImageReveal {
-
-    0% {
-
-        transform:
-            scale(1.2)
-            translateX(35px);
-
-        filter:
-            grayscale(100%)
-            brightness(.25)
-            blur(4px);
-
-    }
-
-    60% {
-
-        transform:
-            scale(1.07)
-            translateX(0);
-
-        filter:
-            grayscale(90%)
-            brightness(.5)
-            blur(0);
-
-    }
-
-    100% {
-
-        transform:
-            scale(1.05)
-            translateX(0);
-
-        filter:
-            grayscale(70%)
-            brightness(.65)
-            blur(0);
-
-    }
-
-}
-
-
-/* =========================================================
-   IMAGE SCAN DURING ENTRY
-========================================================= */
-
-.sustainability-section.sustain-visible
-.image-scan {
-
-    opacity: 1;
-
-    animation:
-        transitImageScan
-        2s
-        ease
-        .5s
-        forwards;
-
-}
-
-
-@keyframes transitImageScan {
-
-    0% {
-
-        top: -10%;
-
-        opacity: 0;
-
-    }
-
-    15% {
-
-        opacity: 1;
-
-    }
-
-    100% {
-
-        top: 110%;
-
-        opacity: 0;
-
-    }
-
-}
-
-
-/* =========================================================
-   LABEL
-========================================================= */
-
-.sustainability-section.sustain-visible
-.section-label {
-
-    animation:
-        transitLabelReveal
-        .7s
-        cubic-bezier(.16,1,.3,1)
-        .1s
-        forwards;
-
-}
-
-
-@keyframes transitLabelReveal {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateX(-45px);
-
-        letter-spacing: 5px;
-
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateX(0);
-
-        letter-spacing: 2px;
-
-    }
-
-}
-
-
-/* =========================================================
-   CYAN DOT / HEADING
-========================================================= */
-
-.sustainability-section.sustain-visible
-.sustain-content h2 span {
-
-    animation:
-        transitCyanPulse
-        2s
-        ease-in-out
-        1.5s
-        infinite;
-
-}
-
-
-@keyframes transitCyanPulse {
-
-    0%,
-    100% {
-
-        text-shadow:
-            0 0 0 transparent;
-
-    }
-
-    50% {
-
-        text-shadow:
-            0 0 25px
-            rgba(5,199,247,.85);
-
-    }
-
-}
-
-
-/* =========================================================
-   SECTION LIGHT SWEEP
-========================================================= */
-
-.sustainability-section::after {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: -120%;
-
-    width: 35%;
-
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(5,199,247,.035),
-            transparent
-        );
-
-    transform:
-        skewX(-15deg);
-
-    pointer-events: none;
-
-    z-index: 10;
-
-}
-
-
-.sustainability-section.sustain-visible::after {
-
-    animation:
-        sectionLightSweep
-        1.8s
-        ease
-        .15s
-        forwards;
-
-}
-
-
-@keyframes sectionLightSweep {
-
-    0% {
-
-        left: -120%;
-
-    }
-
-    100% {
-
-        left: 140%;
-
-    }
-
-}
-
-
-/* =========================================================
-   IMAGE FLOAT AFTER ENTER
-========================================================= */
-
-.sustainability-section.sustain-visible
-.sustain-image {
-
-    animation:
-        transitImageFloat
-        6s
-        ease-in-out
-        1.7s
-        infinite alternate;
-
-}
-
-
-@keyframes transitImageFloat {
-
-    0% {
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-    100% {
-
-        transform:
-            translateY(-7px)
-            scale(1.008);
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .sustain-content {
-
-        transform:
-            translateY(60px);
-
-    }
-
-    .sustainability-section.sustain-visible
-    .sustain-content {
-
-        transform:
-            translateY(0);
-
-    }
-
-    .sustain-image {
-
-        transform:
-            translateY(80px)
-            scale(.92);
-
-    }
-
-    .sustainability-section.sustain-visible
-    .sustain-image {
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .sustainability-section,
-    .sustain-content,
-    .sustain-image,
-    .sustain-content h2,
-    .sustain-content p,
-    .stat-box,
-    .report-btn {
-
-        animation: none !important;
-
-        transition: none !important;
-
-        opacity: 1 !important;
-
-        transform: none !important;
-
-        filter: none !important;
-
-    }
-
-}
 
 
 
@@ -10486,22 +9765,6 @@ background: #232023;
     transition: 0.3s ease;
 }
 
-.explore-link::after {
-    content: "→";
-
-    font-size: 18px;
-
-    transition: transform 0.3s ease;
-}
-
-.explore-link:hover {
-    color: #ffffff;
-}
-
-.explore-link:hover::after {
-    transform: translateX(6px);
-}
-
 
 /* =========================================
    SERVICE GRID
@@ -10577,7 +9840,7 @@ background: #232023;
 }
 
 .service-box span {
-    font-size: 9px;
+    font-size: 11px;
 
     color: rgba(255,255,255,0.55);
 }
@@ -11322,4 +10585,490 @@ background: #232023;
 
 .logistics-visible .global-map-area {
     transition-delay: 0.2s;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE - 768px
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .global-logistics-section {
+        padding: 60px 24px;
+        min-height: auto;
+    }
+
+    .logistics-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .logistics-content {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .logistics-content h2 {
+        font-size: clamp(32px, 5.5vw, 44px);
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    .logistics-content > p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .explore-link {
+        margin-bottom: 25px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .service-box {
+        min-width: 0;
+        min-height: 110px;
+        padding: 14px 10px;
+    }
+
+    .service-box i {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .service-box h4 {
+        font-size: 12px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .service-box span {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .global-map-area {
+        width: 100%;
+        min-height: 480px;
+    }
+
+    .map-title {
+        top: 0;
+        left: 0;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .map-stats {
+        top: 0;
+        right: 0;
+        gap: 14px;
+    }
+
+    .map-stats div {
+        min-width: 0;
+        padding-left: 10px;
+    }
+
+    .map-stats strong {
+        font-size: 19px;
+    }
+
+    .map-stats span {
+        font-size: 9px;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        max-width: 100%;
+        height: 360px;
+        margin-top: 65px;
+    }
+
+    .north-america {
+        width: 25%;
+    }
+
+    .south-america {
+        width: 12%;
+    }
+
+    .europe {
+        width: 15%;
+    }
+
+    .africa {
+        width: 17%;
+    }
+
+    .asia {
+        width: 34%;
+    }
+
+    .australia {
+        width: 12%;
+    }
+
+    .location {
+        font-size: 8px;
+    }
+
+    .map-bottom-text {
+        right: 0;
+        bottom: -5px;
+    }
+
+    .map-bottom-text p {
+        font-size: 11px;
+    }
+}
+
+
+
+@media screen and (max-width: 360px) {
+
+    .global-map-area {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        gap: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* GLOBAL NETWORK HEADING */
+    .map-title {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 0 14px !important;
+
+        color: #05c7f7 !important;
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* NUMBERS ABOVE THE MAP */
+    .map-stats {
+        position: static !important;
+        inset: auto !important;
+        transform: none !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        align-items: stretch !important;
+
+        width: 100% !important;
+        height: auto !important;
+        gap: 8px !important;
+
+        margin: 0 0 22px !important;
+        padding: 0 !important;
+
+        order: 1 !important;
+        z-index: 5 !important;
+    }
+
+    .map-stats > div {
+        position: relative !important;
+        inset: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 65px !important;
+
+        padding: 8px 2px !important;
+        gap: 5px !important;
+
+        background: linear-gradient(
+            145deg,
+            #252d38,
+            #232023
+        ) !important;
+
+        border: 1px solid rgba(5, 199, 247, 0.3) !important;
+        border-radius: 7px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+    .map-stats strong {
+        display: block !important;
+        font-size: 17px !important;
+        line-height: 1.2 !important;
+        color: #05c7f7 !important;
+        white-space: nowrap !important;
+    }
+
+    .map-stats span {
+        display: block !important;
+        font-size: 9px !important;
+        line-height: 1.3 !important;
+        color: #e0e6ed !important;
+        text-align: center !important;
+    }
+
+    /* LARGE MAP UNDER THE NUMBERS */
+    .map-wrapper {
+        position: relative !important;
+        inset: auto !important;
+        transform: none !important;
+
+        display: block !important;
+        order: 2 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 380px !important;
+        min-height: 380px !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+        border-radius: 12px !important;
+
+        background:
+            radial-gradient(
+                ellipse at 50% 45%,
+                rgba(5, 199, 247, 0.12),
+                transparent 68%
+            ),
+            linear-gradient(
+                150deg,
+                #202a35,
+                #232023 75%
+            ) !important;
+
+        border: 1px solid rgba(5, 199, 247, 0.15);
+    }
+
+    /* KEEP MAP AND ROUTES FULL SIZE */
+    .world-map {
+        position: absolute !important;
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .route-svg {
+        position: absolute !important;
+        inset: 0 !important;
+
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: visible !important;
+    }
+
+    /* COLORFUL ROUTES */
+    .route-cyan {
+        stroke: #05c7f7 !important;
+        stroke-width: 1.8 !important;
+        filter: drop-shadow(0 0 4px #05c7f7);
+    }
+
+    .route-orange {
+        stroke: #ff9f43 !important;
+        stroke-width: 1.8 !important;
+        filter: drop-shadow(0 0 4px #ff9f43);
+    }
+
+    .route-green {
+        stroke: #39e6a5 !important;
+        stroke-width: 1.8 !important;
+        filter: drop-shadow(0 0 4px #39e6a5);
+    }
+
+    /* LOCATION MARKERS */
+    .map-point {
+        z-index: 3 !important;
+        background: #ffad4d !important;
+        box-shadow:
+            0 0 6px #ffad4d,
+            0 0 14px rgba(255, 173, 77, 0.8) !important;
+    }
+
+    /* CITY LABELS */
+    .location {
+        z-index: 4 !important;
+        max-width: 68px !important;
+        padding: 4px !important;
+
+        background: rgba(25, 31, 41, 0.9) !important;
+        border: 1px solid rgba(5, 199, 247, 0.25);
+        border-radius: 4px !important;
+    }
+
+    .location strong {
+        font-size: 8px !important;
+        color: #ffffff !important;
+    }
+
+    .location span {
+        font-size: 7px !important;
+        color: #05c7f7 !important;
+    }
+
+    /* BOTTOM MESSAGE BELOW THE MAP */
+    .map-bottom-text {
+        position: relative !important;
+        inset: auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        margin: 18px 0 0 !important;
+        order: 3 !important;
+    }
+
+    .map-bottom-text p {
+        margin: 0 !important;
+        font-size: 10px !important;
+        line-height: 1.6 !important;
+        color: #ffffff !important;
+    }
+}
+
+
+/* =========================================
+   NAVBAR MENU HOVER ANIMATION
+========================================= */
+
+.nav__links li a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* BLUE UNDERLINE */
+.nav__links li a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #05c7f7;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.35s ease;
+}
+
+/* HOVER EFFECT */
+.nav__links li a:hover {
+    color: #05c7f7;
+    transform: translateY(-2px);
+}
+
+.nav__links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* SCROLLED NAVBAR HOVER */
+.navbar.scrolled .nav__links li a:hover {
+    color: #05c7f7;
+}
+
+.navbar.scrolled .nav__links li a::after {
+    background: #05c7f7;
+}
+
+/* SIGNUP BUTTON HOVER */
+.signup-nav {
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.signup-nav:hover {
+    color: #05c7f7 !important;
+    border-color: #05c7f7 !important;
+    background: rgba(5, 199, 247, 0.08) !important;
+
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(5, 199, 247, 0.15);
+}
+
+/* HAMBURGER HOVER */
+.nav__menu__btn {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav__menu__btn:hover {
+    color: #05c7f7 !important;
+    transform: scale(1.1);
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .nav__links li a,
+    .nav__links li a::after,
+    .signup-nav,
+    .nav__menu__btn {
+        transition: none;
+    }
+}
+
+.track-link i {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.track-link:hover i {
+    transform: translateX(5px);
+}
+
+.explore-link i {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.explore-link:hover i {
+    transform: translateX(5px);
 }

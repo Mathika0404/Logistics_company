@@ -41,8 +41,6 @@ html, body {
 }
 
 
-/* Loader Hidden */
-
 .page-loader.hide {
     opacity: 0;
     visibility: hidden;
@@ -204,6 +202,23 @@ html, body {
 }
 
 
+/* MOBILE */
+
+
+@media (max-width:360px){
+
+  .nav__links{
+    width:92%;
+  }
+
+  .nav__menu__btn{
+    font-size:1.6rem;
+    margin-left: auto;
+  }
+
+}
+
+
 /* NAVBAR */
 header{
   position:fixed;
@@ -287,6 +302,7 @@ header{
 .navbar.scrolled .nav__menu__btn{
   color:#000;
 }
+
 
 /* =========================================
    ABOUT LANDING
@@ -1140,7 +1156,7 @@ header{
 
     color: #555;
 
-    font-size: 7px;
+    font-size: 10px;
 
     letter-spacing: 1.8px;
 }
@@ -1913,7 +1929,6 @@ header{
     background: #f5f5f3;
 }
 
-
 /* =========================================
    KICKER
 ========================================= */
@@ -1926,7 +1941,7 @@ header{
 
     color: #111;
 
-    font-size: 8px;
+    font-size: 10px;
 
     font-weight: 800;
 
@@ -2314,7 +2329,7 @@ header{
 
     border: 1px solid rgba(0,0,0,.5);
 
-    font-size: 8px;
+    font-size: 14px;
 
     font-weight: 800;
 }
@@ -2400,7 +2415,7 @@ header{
 
     display: block;
 
-    font-size: 9px;
+    font-size: 14px;
 
     font-weight: 900;
 
@@ -2412,7 +2427,7 @@ header{
 
     margin: 4px 0 0;
 
-    font-size: 8px;
+    font-size: 12px;
 
     color: rgba(0,0,0,.6);
 
@@ -2434,7 +2449,7 @@ header{
 
     margin-top: 45px;
 
-    font-size: 6px;
+    font-size: 10px;
 
     font-weight: 800;
 
@@ -2488,7 +2503,7 @@ header{
 
     margin: 0;
 
-    font-size: 6px;
+    font-size: 10px;
 
     letter-spacing: 1.5px;
 
@@ -2842,7 +2857,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -3106,7 +3121,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 6px;
+    font-size: 10px;
 
     letter-spacing: .8px;
 
@@ -3139,7 +3154,7 @@ header{
 
     color: #aaa;
 
-    font-size: 6px;
+    font-size: 10px;
 
     letter-spacing: .8px;
 
@@ -3200,7 +3215,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 7px;
+    font-size: 12px;
 
     font-weight: 700;
 
@@ -3216,7 +3231,7 @@ header{
 
     color: #686868;
 
-    font-size: 9px;
+    font-size: 10px;
 
     line-height: 1.65;
 }
@@ -3252,7 +3267,7 @@ header{
 
     text-decoration: none;
 
-    font-size: 10px;
+    font-size: 14px;
 
     opacity: 0;
 
@@ -3680,7 +3695,7 @@ header{
 
     color: #4f4f4f;
 
-    font-size: 6px;
+    font-size: 10px;
 
     letter-spacing: 1.5px;
 }
@@ -4037,7 +4052,7 @@ header{
 
     color: #fff;
 
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 700;
 
     letter-spacing: 1.5px;
@@ -4094,7 +4109,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 6px;
+    font-size: 10px;
     font-weight: 700;
 
     letter-spacing: 1.8px;
@@ -4272,7 +4287,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 6px;
+    font-size: 10px;
 
     letter-spacing: .9px;
 
@@ -4343,7 +4358,7 @@ header{
 
     color: #aaa7aa;
 
-    font-size: 9px;
+    font-size: 11px;
 
     line-height: 1.6;
 }
@@ -4468,7 +4483,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 6px;
+    font-size: 12px;
 
     letter-spacing: 1px;
 }
@@ -4495,7 +4510,7 @@ header{
 
     color: #89868a;
 
-    font-size: 8px;
+    font-size: 10px;
 
     line-height: 1.6;
 }
@@ -4564,7 +4579,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 5px;
+    font-size: 8px;
 
     letter-spacing: .7px;
 }
@@ -4598,7 +4613,7 @@ header{
 
     color: #fff;
 
-    font-size: 19px;
+    font-size: 22px;
 
     font-weight: 800;
 }
@@ -4610,7 +4625,7 @@ header{
 
     color: #05c7f7;
 
-    font-size: 5px;
+    font-size: 10px;
 
     letter-spacing: .8px;
 }
@@ -5527,7 +5542,7 @@ header{
 .lc-card-number {
     position: absolute;
 
-    top: 22px;
+    top: 23px;
     left: 22px;
 
     z-index: 3;
@@ -5578,7 +5593,7 @@ header{
 
     margin-bottom: 8px;
 
-    font-size: 8px;
+    font-size: 10px;
 
     font-weight: 600;
 
@@ -5793,6 +5808,10 @@ header{
     align-items: center;
 
     gap: 10px;
+}
+
+.lc-bottom-left span {
+    font-size: 10px;
 }
 
 .lc-bottom-dot {
@@ -6318,7 +6337,7 @@ header{
 
     margin-bottom: 7px;
 
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: 500;
 
@@ -6788,3 +6807,248 @@ header{
     }
 
 }
+
+/* =========================================
+   NAVBAR MENU HOVER ANIMATION
+========================================= */
+
+.nav__links li a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* BLUE UNDERLINE */
+.nav__links li a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #05c7f7;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.35s ease;
+}
+
+/* HOVER EFFECT */
+.nav__links li a:hover {
+    color: #05c7f7;
+    transform: translateY(-2px);
+}
+
+.nav__links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* SCROLLED NAVBAR HOVER */
+.navbar.scrolled .nav__links li a:hover {
+    color: #05c7f7;
+}
+
+.navbar.scrolled .nav__links li a::after {
+    background: #05c7f7;
+}
+
+/* SIGNUP BUTTON HOVER */
+.signup-nav {
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.signup-nav:hover {
+    color: #05c7f7 !important;
+    border-color: #05c7f7 !important;
+    background: rgba(5, 199, 247, 0.08) !important;
+
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(5, 199, 247, 0.15);
+}
+
+/* HAMBURGER HOVER */
+.nav__menu__btn {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav__menu__btn:hover {
+    color: #05c7f7 !important;
+    transform: scale(1.1);
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .nav__links li a,
+    .nav__links li a::after,
+    .signup-nav,
+    .nav__menu__btn {
+        transition: none;
+    }
+}
+
+/* =========================================
+   MOBILE HAMBURGER MENU
+========================================= */
+
+@media screen and (max-width: 786px) {
+
+    /* HEADER */
+    .navbar,
+    .navbar.scrolled {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        background: transparent;
+    }
+
+    .navbar.scrolled {
+        background: #ffffff;
+    }
+
+    /* LOGO + HAMBURGER */
+    .nav__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* HAMBURGER ICON */
+    .nav__menu__btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 10002;
+        color: #fff;
+        background: transparent;
+        border: none;
+    }
+
+    .navbar.scrolled .nav__menu__btn {
+        color: #111111;
+    }
+
+    /* MENU CLOSED BY DEFAULT */
+    .nav__links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        display: flex !important;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        max-height: 0;
+        padding: 0 16px;
+        margin: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        background: #000000;
+        border-radius: 0 0 12px 12px;
+        box-sizing: border-box;
+        z-index: 10001;
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    /* OPEN MENU BEFORE SCROLL */
+    .navbar:not(.scrolled) .nav__links.open {
+        max-height: 80vh;
+        padding: 12px 16px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        background: #000000;
+    }
+
+    .navbar:not(.scrolled) .nav__links li a {
+        color: #ffffff !important;
+    }
+
+    /* OPEN MENU AFTER SCROLL */
+    .navbar.scrolled .nav__links.open {
+        max-height: 80vh;
+        padding: 12px 16px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        background: #ffffff;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar.scrolled .nav__links li a {
+        color: #111111 !important;
+    }
+
+    /* LINK STYLE */
+    .nav__links li {
+        display: block;
+        width: 100%;
+    }
+
+    .nav__links li a {
+        display: block;
+        width: 100%;
+        padding: 16px 8px;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    }
+
+    /* BLUE HOVER */
+    .nav__links li a:hover {
+        color: #05c7f7 !important;
+    }
+
+        .nav__links li a::after {
+        display: none !important;
+        content: none !important;
+        transform: none !important;
+    }
+
+    /* REMOVE HORIZONTAL LINES */
+    .nav__links li a,
+    .navbar.scrolled .nav__links li a {
+        border-bottom: none !important;
+    }
+}
+

@@ -60,10 +60,74 @@ body {
 
 /* Logo */
 
-.logo {
-    font-size: 22px;
-    letter-spacing: 2.5px;
-    color: #fff;
+/* SIDEBAR HEADER */
+.sidebar-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 20px;
+}
+
+/* LOGO + USER DETAILS */
+.sidebar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+}
+
+/* IMAGE LOGO */
+.sidebar-logo {
+    display: block;
+    width: 145px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* USER INFO */
+.sidebar-user-info {
+    width: 100%;
+    min-width: 0;
+}
+
+.sidebar-role {
+    display: block;
+    color: #05c7f7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.sidebar-user-info p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    opacity: 0.85;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    flex-shrink: 0;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .sidebar-header {
+        padding: 18px 16px;
+    }
+
+    .sidebar-logo {
+        width: 130px;
+    }
 }
 
 
@@ -820,7 +884,7 @@ body {
 .alerts-heading h3 {
     color: #172033;
 
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -5739,4 +5803,51 @@ select {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* EMAIL HIDDEN BY DEFAULT */
+.sidebar-user-info {
+    display: none;
+}
+
+/* SHOW EMAIL ONLY IN MOBILE VIEW */
+@media (max-width: 900px) {
+    .sidebar-user-info {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        margin-top: 8px;
+    }
+
+    .sidebar-role {
+        display: block;
+        color: #05c7f7;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin-bottom: 5px;
+    }
+
+    .sidebar-user-info p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}
+
+
+.sidebar-logo {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sidebar-logo img {
+    display: block;
+    width: 145px;
+    height: auto;
+    object-fit: contain;
 }

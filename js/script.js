@@ -55,24 +55,41 @@ if (menuBtn && navLinks) {
 }
 
 
-/* =========================================================
-   PAGE PRELOADER
-========================================================= */
+/* =========================================
+   STACKLY PAGE LOADER
+========================================= */
 
-window.addEventListener("load", function () {
-
-    const loader =
-        document.getElementById("pageLoader");
+(function () {
+    const loader = document.getElementById("pageLoader");
 
     if (!loader) return;
 
-    setTimeout(function () {
+    let loaderHidden = false;
 
+    function hideLoader() {
+        if (loaderHidden) return;
+
+        loaderHidden = true;
         loader.classList.add("hide");
 
-    }, 3000);
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 750);
+    }
 
-});
+    // Hide loader when page resources finish loading
+    if (document.readyState === "complete") {
+        setTimeout(hideLoader, 500);
+    } else {
+        window.addEventListener("load", function () {
+            setTimeout(hideLoader, 500);
+        }, { once: true });
+    }
+
+    // Fallback: don't keep loader visible for too long
+    setTimeout(hideLoader, 2500);
+
+})();
 
 
 /* =========================================================

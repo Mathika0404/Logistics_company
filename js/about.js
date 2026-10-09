@@ -1,10 +1,17 @@
-// =====================================
-// SCROLLING NAVBAR
-// =====================================
+/* =========================================================
+   STACKLY LOGISTICS
+   MAIN JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   NAVBAR SCROLL
+========================================================= */
 
 window.addEventListener("scroll", function () {
 
-    const navbar = document.querySelector(".navbar");
+    const navbar =
+        document.querySelector(".navbar");
 
     if (!navbar) return;
 
@@ -21,25 +28,141 @@ window.addEventListener("scroll", function () {
 });
 
 
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
 
-/* =====================================
-   PAGE PRELOADER
-===================================== */
+const menuBtn =
+    document.getElementById("menu-btn");
 
-window.addEventListener("load", function () {
+const navLinks =
+    document.getElementById("nav-links");
 
-    const loader =
-        document.getElementById("pageLoader");
+
+if (menuBtn && navLinks) {
+
+    menuBtn.addEventListener(
+        "click",
+        function () {
+
+            navLinks.classList.toggle("open");
+
+            menuBtn.classList.toggle("active");
+
+        }
+    );
+
+}
+
+/* =========================================
+   STACKLY PAGE LOADER
+========================================= */
+
+(function () {
+    const loader = document.getElementById("pageLoader");
 
     if (!loader) return;
 
-    setTimeout(function () {
+    let loaderHidden = false;
 
+    function hideLoader() {
+        if (loaderHidden) return;
+
+        loaderHidden = true;
         loader.classList.add("hide");
 
-    }, 3000);
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 750);
+    }
 
-});
+    // Hide loader when page resources finish loading
+    if (document.readyState === "complete") {
+        setTimeout(hideLoader, 500);
+    } else {
+        window.addEventListener("load", function () {
+            setTimeout(hideLoader, 500);
+        }, { once: true });
+    }
+
+    // Fallback: don't keep loader visible for too long
+    setTimeout(hideLoader, 2500);
+
+})();
+
+
+/* =========================================================
+   SUBSCRIBE FORM
+========================================================= */
+
+const subscribeForm =
+    document.getElementById(
+        "subscribeForm"
+    );
+
+const emailInput =
+    document.getElementById(
+        "emailInput"
+    );
+
+const emailError =
+    document.getElementById(
+        "emailError"
+    );
+
+
+if (
+    subscribeForm &&
+    emailInput
+) {
+
+    subscribeForm.addEventListener(
+        "submit",
+        function (e) {
+
+            e.preventDefault();
+
+
+            const email =
+                emailInput.value.trim();
+
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (
+                !emailPattern.test(email)
+            ) {
+
+                if (emailError) {
+
+                    emailError.textContent =
+                        "Please enter a valid email address.";
+
+                }
+
+                emailInput.focus();
+
+                return;
+
+            }
+
+
+            if (emailError) {
+
+                emailError.textContent = "";
+
+            }
+
+
+            window.location.href =
+                "404.html";
+
+        }
+    );
+
+}
 
 
 

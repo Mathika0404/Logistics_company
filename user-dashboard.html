@@ -31,14 +31,29 @@
 
     <div class="sidebar-header">
 
-        <h2 class="logo">
-            STACKLY
-        </h2>
+        <div class="sidebar-brand">
+
+            <!-- CLICKABLE STACKLY LOGO -->
+            <a href="user-dashboard.html" class="sidebar-logo">
+                <img
+                    src="images/stackly_logo.webp"
+                    alt="STACKLY Logo"
+                >
+            </a>
+
+            <!-- Logged-in User Email -->
+            <div class="sidebar-user-info">
+                <span class="sidebar-role">USER</span>
+                <p id="mobileUserEmail">Loading email...</p>
+            </div>
+
+        </div>
 
         <button
             class="close-btn"
             id="closeBtn"
             type="button"
+            aria-label="Close sidebar"
         >
             <i class="ri-close-line"></i>
         </button>
