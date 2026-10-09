@@ -5851,3 +5851,24 @@ select {
     height: auto;
     object-fit: contain;
 }
+
+/* Mobile Logo */
+.mobile-logo {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-logo img {
+    width: 140px;
+    height: auto;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .mobile-logo {
+        display: flex;
+    }
+}

@@ -13,6 +13,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;  
+}
+
 
 body {
     font-family: "Poppins", Arial, sans-serif;
@@ -5063,5 +5067,594 @@ select {
         font-size: 12px;
         margin: 0;
         overflow-wrap: anywhere;
+    }
+}
+
+/* =========================================
+   TABLET RESPONSIVE - 768px
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .tracking-section {
+        padding: 30px 18px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .tracking-header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .tracking-header h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .tracking-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .tracking-live {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .tracking-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .tracking-map-card,
+    .tracking-sidebar {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .live-map {
+        width: 100%;
+        height: 380px;
+        min-width: 0;
+    }
+
+    .tracking-route {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-point label {
+        font-size: 10px;
+    }
+
+    .truck-tooltip {
+        font-size: 10px;
+    }
+
+    .map-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .selected-vehicle {
+        padding: 22px;
+    }
+
+    .selected-top {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .selected-top h2 {
+        font-size: 23px;
+    }
+
+    .live-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .tracking-alerts {
+        width: 100%;
+    }
+
+    .fleet-live-summary {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    .summary-title {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .live-vehicles {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .live-vehicle-card {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE - 360px
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .tracking-section {
+        padding: 22px 12px;
+        overflow-x: hidden;
+    }
+
+    .tracking-header {
+        gap: 14px;
+    }
+
+    .tracking-header .section-label {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+    }
+
+    .tracking-header h1 {
+        font-size: 25px;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .tracking-header p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .tracking-live {
+        gap: 7px;
+        font-size: 10px;
+    }
+
+    .tracking-live small {
+        font-size: 9px;
+    }
+
+    .tracking-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .tracking-map-card {
+        min-width: 0;
+        border-radius: 12px;
+    }
+
+    .map-topbar {
+        padding: 14px 12px;
+        gap: 8px;
+    }
+
+    .map-topbar strong {
+        font-size: 13px;
+    }
+
+    .map-topbar span {
+        font-size: 10px;
+    }
+
+    .live-map {
+        width: 100%;
+        height: 260px;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .tracking-route {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-point label {
+        font-size: 8px;
+        white-space: nowrap;
+    }
+
+    .map-road {
+        font-size: 8px;
+    }
+
+    .truck-marker {
+        width: 27px;
+        height: 27px;
+        font-size: 13px;
+    }
+
+    .truck-tooltip {
+        padding: 5px 7px;
+        font-size: 8px;
+    }
+
+    .map-footer {
+        padding: 12px;
+        gap: 10px;
+        font-size: 9px;
+    }
+
+    .map-update {
+        width: 100%;
+        font-size: 9px;
+    }
+
+    .tracking-sidebar {
+        min-width: 0;
+        gap: 14px;
+    }
+
+    .selected-vehicle {
+        padding: 16px 12px;
+    }
+
+    .selected-top {
+        gap: 12px;
+    }
+
+    .mini-label {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .selected-top h2 {
+        font-size: 19px;
+        overflow-wrap: anywhere;
+    }
+
+    .selected-top p {
+        font-size: 11px;
+    }
+
+    .tracking-status {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
+
+    .driver-box {
+        gap: 10px;
+        padding: 13px 0;
+    }
+
+    .driver-avatar {
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+        font-size: 11px;
+    }
+
+    .driver-box strong {
+        font-size: 11px;
+    }
+
+    .driver-box small {
+        font-size: 9px;
+    }
+
+    .driver-box button {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .route-info {
+        gap: 10px;
+    }
+
+    .route-location strong {
+        font-size: 11px;
+    }
+
+    .route-location span {
+        font-size: 9px;
+    }
+
+    .live-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .live-metric {
+        min-width: 0;
+        padding: 13px 10px;
+    }
+
+    .metric-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    .live-metric > span {
+        font-size: 10px;
+    }
+
+    .live-metric > strong {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .live-metric > strong small {
+        font-size: 9px;
+    }
+
+    .tracking-alerts {
+        padding: 15px 12px;
+        min-width: 0;
+    }
+
+    .alerts-header h3 {
+        font-size: 16px;
+    }
+
+    .alerts-header span {
+        font-size: 10px;
+    }
+
+    .alert-item {
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .alert-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+    .alert-item strong {
+        font-size: 11px;
+    }
+
+    .alert-item span {
+        font-size: 9px;
+        overflow-wrap: anywhere;
+    }
+
+    .fleet-live-summary {
+        margin-top: 20px;
+        min-width: 0;
+    }
+
+    .summary-title {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .summary-title h2 {
+        font-size: 19px;
+        line-height: 1.3;
+    }
+
+    .summary-title .section-label {
+        font-size: 9px;
+    }
+
+    .summary-title button {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    .live-vehicles {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .live-vehicle-card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 10px;
+        min-width: 0;
+    }
+
+    .live-vehicle-icon {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        font-size: 16px;
+    }
+
+    .live-vehicle-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .live-vehicle-info strong {
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    .live-vehicle-info span {
+        font-size: 9px;
+        overflow-wrap: anywhere;
+    }
+
+    .live-vehicle-status {
+        font-size: 9px;
+    }
+
+    .live-speed {
+        font-size: 11px;
+        margin-left: auto;
+    }
+}
+
+/* =========================================
+   TABLET - 768px
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .tracking-sidebar {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .selected-vehicle {
+        padding: 32px 28px;
+    }
+
+    .selected-top {
+        padding-bottom: 22px;
+        gap: 20px;
+    }
+
+    .driver-box {
+        padding: 24px 0;
+        gap: 18px;
+    }
+
+    .route-info {
+        padding: 24px 0 10px;
+    }
+
+    .live-metrics {
+        gap: 18px;
+    }
+
+    .live-metric {
+        padding: 26px 22px;
+        min-height: 145px;
+    }
+
+    .tracking-alerts {
+        padding: 28px 26px;
+    }
+
+    .alerts-header {
+        margin-bottom: 20px;
+    }
+
+    .alert-item {
+        padding: 20px 0;
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE - 360px
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .tracking-sidebar {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .selected-vehicle {
+        padding: 28px 22px;
+    }
+
+.selected-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 20px;
+}
+
+    .selected-top > div {
+        min-width: 0;
+    }
+
+    .selected-top h2 {
+        margin: 12px 0;
+    }
+
+    .driver-box {
+        padding: 22px 0;
+        gap: 14px;
+    }
+
+    .driver-box > div:nth-child(2) {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .route-info {
+        padding: 22px 0 8px;
+    }
+
+    .tracking-alerts {
+        padding: 24px 20px;
+    }
+
+    .alerts-header {
+        margin-bottom: 18px;
+    }
+
+    .alert-item {
+        padding: 18px 0;
+        gap: 14px;
+    }
+
+    .alert-item > div:last-of-type {
+        min-width: 0;
+    }
+
+}
+
+.mobile-logo {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mobile-logo img {
+    width: 140px;
+    height: auto;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-logo {
+        display: flex;
+    }
+}
+
+/* MOBILE VIEW - SINGLE COLUMN */
+@media screen and (max-width: 768px) {
+    .live-metrics {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .live-metric {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 26px 24px;
+        min-height: 140px;
+    }
+}
+
+/* SMALL MOBILE - 360px */
+@media screen and (max-width: 360px) {
+    .live-metrics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .live-metric {
+        padding: 24px 20px;
+        min-height: 130px;
     }
 }
